@@ -1,0 +1,1224 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorGreenApple {
+	background-color: #e0e6c3;
+	}
+
+.FormTitleBgColorGreenApple {
+	background-color: #3c964b;
+	}
+
+.FormTitleFontColorGreenApple {
+	color: #ffffff;
+	}
+
+.CaptionBgColorGreenApple {
+	background-color: #fff3c9;
+	}
+
+.CaptionFontColorGreenApple {
+	color: #000000;
+	}
+
+.DataBgColorGreenApple {
+	background-color: #fffcf2;
+	}
+
+.AltDataBgColorGreenApple {
+	background-color: #ecf7e4;
+	}
+
+.DataFontColorGreenApple {
+	color: #000000;
+	}
+
+.LinkColorGreenApple {
+	color: #0033cc;
+	}
+
+.VisitedLinkColorGreenApple {
+	color: #830000;
+	}
+
+.HoverLinkColorGreenApple {
+	color: #ff0000;
+	}
+
+.ColorBgButtonGreenApple {
+	background-color: #3c964b;
+}
+
+.ColorFontButtonGreenApple {
+	color: #ffffff;
+}
+
+.ColorBgButtonPassiveGreenApple {
+	background-color: #86d292;
+}
+
+.ColorFontButtonPassiveGreenApple {
+	color: #ffffff;
+}
+
+
+
+.HeaderGreenApple {
+	width: 100%;
+	}
+
+.HeaderGreenApple th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 3px;
+	background-image: url('Images/HeaderBg.gif'); color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+	
+	}
+
+
+html>body .HeaderGreenApple th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderGreenApple th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.HeaderGreenApple a:link { 
+	color: #ffffff;
+	}
+
+.HeaderGreenApple a:visited { 
+	color: #ffffff;
+	}
+
+.HeaderGreenApple a:hover, .CaptionGreenApple a:active { 
+	color: #ffffff; text-decoration: none;
+	}
+
+.HeaderLeftGreenApple { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightGreenApple { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftGreenApple img{
+	width: 9px;
+	}
+
+.HeaderRightGreenApple img{
+	width: 9px;
+	}
+
+
+/* Grid Options */
+.GridGreenApple { 
+	border: 1px solid #3c964b; border-left: 0px;
+	width: 100%;
+	}
+
+.CaptionGreenApple th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b; border-bottom: 1px solid #3c964b;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionGreenApple td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b; border-bottom: 1px solid #3c964b;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+
+html>body .CaptionGreenApple th, html>body .CaptionGreenApple td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionGreenApple th, * html body .CaptionGreenApple td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionGreenApple a:link { 
+	color: #000000;
+	}
+
+.CaptionGreenApple a:visited { 
+	color: #000000;
+	}
+
+.CaptionGreenApple a:hover, .CaptionGreenApple a:active { 
+	color: #ff0000;
+	}
+
+.CaptionGreenApple img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionGreenApple input {
+	vertical-align: middle;
+	}
+
+.RowGreenApple th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	background-color: #fffcf2; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowGreenApple td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	vertical-align: top;
+	background-color: #fffcf2; 
+	color: #000000;
+	}
+	
+
+html>body .RowGreenApple th, html>body .RowGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .RowGreenApple th, * html body .RowGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+caption.RowGreenApple { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border: 1px solid #3c964b; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #fffcf2; 
+	color: #000000;
+	}
+
+
+html>body caption.RowGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body caption.RowGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.RowGreenApple a:link { 
+	color: #0033cc;
+	}
+
+.RowGreenApple a:visited { 
+	color: #830000;
+	}
+
+.RowGreenApple a:hover, .RowGreenApple a:active { 
+	color: #ff0000;
+	}
+
+.SeparatorGreenApple{
+	color: #3c964b;
+	}
+
+.SeparatorGreenApple td{
+	height: 1px;
+	}
+
+
+.AltRowGreenApple th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	background-color: #fffcf2; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowGreenApple td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ecf7e4; 
+	color: #000000;
+	}
+
+
+html>body .AltRowGreenApple th, html>body .AltRowGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .AltRowGreenApple th, * html body .AltRowGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.AltRowGreenApple a:link { 
+	color: #0033cc;
+	}
+
+.AltRowGreenApple a:visited { 
+	color: #830000;
+	}
+
+.AltRowGreenApple a:hover, .AltRowGreenApple a:active { 
+	color: #ff0000;
+	}
+
+.NoRecordsGreenApple td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	background-color: #fffcf2; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterGreenApple td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .NoRecordsGreenApple td, html>body .FooterGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .NoRecordsGreenApple td, * html body .FooterGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.FooterGreenApple a:link { 
+	color: #0033cc;
+	}
+
+.FooterGreenApple a:visited { 
+	color: #830000;
+	}
+
+.FooterGreenApple a:hover, .FooterGreenApple a:active { 
+	color: #ff0000;
+	}
+
+.FooterGreenApple img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterGreenApple input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordGreenApple { 
+	border: 1px solid #3c964b; border-left: 0px;
+	width: 100%;
+	}
+
+.ErrorGreenApple td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b; border-bottom: 1px solid #3c964b;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #fffcf2; 
+	}
+
+
+* html>body .ErrorGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ErrorGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.ControlsGreenApple th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	background-color: #fffcf2; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsGreenApple td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	vertical-align: top;
+	background-color: #fffcf2; 
+	color: #000000;
+	}
+	
+.BottomGreenApple td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .ControlsGreenApple th, html>body .ControlsGreenApple td, html>body .BottomGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ControlsGreenApple th, * html body .ControlsGreenApple td, * html body .BottomGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.BottomGreenApple a:link { 
+	color: #0033cc;
+	}
+
+.BottomGreenApple a:visited { 
+	color: #830000;
+	}
+
+.BottomGreenApple a:hover, .CaptionGreenApple a:active { 
+	color: #ff0000;
+	}
+
+.BottomGreenApple img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomGreenApple input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionGreenApple th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ecf7e4; 
+	color: #000000;
+	}
+
+.GroupCaptionGreenApple td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #fffcf2; 
+	color: #000000;
+	}
+
+
+html>body .GroupCaptionGreenApple th, html>body .GroupCaptionGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionGreenApple th, * html body .GroupCaptionGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionGreenApple a:link {
+	color: #000000;
+	}
+
+.GroupCaptionGreenApple a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionGreenApple a:hover, .GroupCaptionGreenApple a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterGreenApple td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #fff3c9; 
+	color: #000000;
+	}
+
+
+html>body .GroupFooterGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupFooterGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterGreenApple a:link {
+	color: #0033cc;
+	}
+
+.GroupFooterGreenApple a:visited{
+	color: #830000;
+	}
+
+.GroupFooterGreenApple a:hover, .GroupFooterGreenApple a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterGreenApple img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterGreenApple input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalGreenApple td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ecf7e4; 
+	color: #000000;
+	border-bottom: 2px solid #3c964b;
+	}
+
+
+html>body .SubTotalGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .SubTotalGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.SubTotalGreenApple a:link {
+	color: #0033cc;
+	}
+
+.SubTotalGreenApple a:visited{
+	color: #830000;
+	}
+
+.SubTotalGreenApple a:hover, .SubTotalGreenApple a:active{
+	color: #ff0000;
+	}
+
+.TotalGreenApple td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #ecf7e4; 
+	color: #000000;
+	}
+
+
+html>body .TotalGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .TotalGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.TotalGreenApple a:link {
+	color: #0033cc;
+	}
+
+.TotalGreenApple a:visited{
+	color: #830000;
+	}
+
+.TotalGreenApple a:hover, .TotalGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Form Options */
+.ButtonGreenApple { 
+	background-color: #3c964b; color: #ffffff; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 11px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarGreenApple { 
+	border: 1px solid #3c964b;
+	width: 100%;
+	}
+
+.CalendarWeekdayNameGreenApple{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b; border-bottom: 1px solid #3c964b;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #ecf7e4; 
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekdayNameGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekdayNameGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNameGreenApple a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekdayNameGreenApple a:visited{
+	color: #830000;
+	}
+
+.CalendarWeekdayNameGreenApple a:hover, .CalendarWeekdayNameGreenApple a:active{
+	color: #ff0000;
+	}
+
+.CalendarWeekendNameGreenApple{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b; border-bottom: 1px solid #3c964b;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #ecf7e4;	
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekendNameGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendNameGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNameGreenApple a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNameGreenApple a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNameGreenApple a:link, .CalendarWeekendNameGreenApple a:visited{
+	color: #ff0000;
+	}
+
+/* Calendar Day */
+.CalendarDayGreenApple{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: center;
+	background-color: #fffcf2;	
+	color: #000000;
+	}
+
+
+html>body .CalendarDayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarDayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayGreenApple a:link {
+	color: #0033cc;
+	}
+
+.CalendarDayGreenApple a:visited{
+	color: #830000;
+	}
+
+.CalendarDayGreenApple a:hover, .CalendarDayGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendGreenApple{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: center;
+	background-color: #ecf7e4;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendGreenApple a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendGreenApple a:visited{
+	color: #830000;
+	}
+
+.CalendarWeekendGreenApple a:hover, .CalendarWeekendGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Today */
+.CalendarTodayGreenApple {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #3c964b; border-right: 1px solid #3c964b;
+	text-align: center;
+	background-color: #fffcf2;	
+	color: #000000;
+	}
+
+
+html>body .CalendarTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayGreenApple a:link {
+	color: #0033cc;
+	}
+
+.CalendarTodayGreenApple a:visited{
+	color: #830000;
+	}
+
+.CalendarTodayGreenApple a:hover, .CalendarTodayGreenApple a:active {
+	color: #ff0000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayGreenApple {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #3c964b; border-right: 1px solid #3c964b;
+	text-align: center;
+	background-color: #ecf7e4;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayGreenApple a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendTodayGreenApple a:visited{
+	color: #830000;
+	}
+
+.CalendarWeekendTodayGreenApple a:hover, .CalendarWeekendTodayGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayGreenApple{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: center;
+	background-color: #fffcf2;	
+	color: #3c964b;
+	}
+
+
+html>body .CalendarOtherMonthDayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayGreenApple a:link {
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthDayGreenApple a:visited{
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthDayGreenApple a:hover, .CalendarOtherMonthDayGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayGreenApple {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #3c964b; border-right: 1px solid #3c964b;
+	text-align: center;
+	background-color: #fffcf2;	
+	color: #3c964b;
+	}
+
+
+html>body .CalendarOtherMonthTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayGreenApple a:link {
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthTodayGreenApple a:visited{
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthTodayGreenApple a:hover, .CalendarOtherMonthTodayGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendGreenApple {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: center;
+	background-color: #ecf7e4;	
+	color: #3c964b;
+	}
+
+
+html>body .CalendarOtherMonthWeekendGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendGreenApple a:link {
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthWeekendGreenApple a:visited{
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthWeekendGreenApple a:hover, .CalendarOtherMonthWeekendGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayGreenApple {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #3c964b; border-right: 1px solid #3c964b;
+	text-align: center;
+	color: #3c964b;
+	background-color: #ecf7e4;	
+	}
+	
+
+html>body .CalendarOtherMonthWeekendTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayGreenApple a:link {
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthWeekendTodayGreenApple a:visited{
+	color: #3c964b;
+	}
+
+.CalendarOtherMonthWeekendTodayGreenApple a:hover, .CalendarOtherMonthWeekendTodayGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayGreenApple{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	background-color: #fff3c9;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+html>body .CalendarSelectedDayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarSelectedDayGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayGreenApple a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDayGreenApple a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDayGreenApple a:hover, .CalendarSelectedDayGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorGreenApple {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .CalendarNavigatorGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorGreenApple a:link {
+	color: #0033cc;
+	}
+
+.CalendarNavigatorGreenApple a:visited{
+	color: #830000;
+	}
+
+.CalendarNavigatorGreenApple a:hover, .CalendarNavigatorGreenApple a:active{
+	color: #ff0000;
+	}
+
+.CalendarNavigatorGreenApple img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorGreenApple td {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+.CalendarNavigatorGreenApple th {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+
+html>body .CalendarNavigatorGreenApple th, html>body .CalendarNavigatorGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorGreenApple th, * html body .CalendarNavigatorGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventGreenApple{
+	font-family: Tahoma; font-size: 80%;
+	text-align: left;
+	}
+
+
+html>body .CalendarEventGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarEventGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventGreenApple a:link {
+	color: #0033cc;
+	}
+
+.CalendarEventGreenApple a:visited{
+	color: #830000;
+	}
+
+.CalendarEventGreenApple a:hover, .CalendarEventGreenApple a:active{
+	color: #ff0000;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thGreenApple { 
+	font-family: Tahoma; font-size: 80%;
+	font-weight: bold;
+}
+
+
+html>body .thGreenApple {
+	font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .thGreenApple {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderGreenApple .thGreenApple { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 3px;
+	background-image: url('Images/HeaderBg.gif'); color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+html>body .HeaderGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.CaptionGreenApple .thGreenApple { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #3c964b; border-left: 1px solid #3c964b; border-bottom: 1px solid #3c964b;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+}
+
+
+html>body .CaptionGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowGreenApple .thGreenApple { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	background-color: #fffcf2; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.AltRowGreenApple .thGreenApple { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	background-color: #fffcf2; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.ControlsGreenApple .thGreenApple { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	background-color: #fffcf2; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.GroupCaptionGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #3c964b;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ecf7e4; 
+	color: #000000;
+}
+
+
+html>body .GroupCaptionGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+html>body .RowGreenApple .thGreenApple, html>body .AltRowGreenApple .thGreenApple, html>body .ControlsGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 100%;
+}
+
+* html body .RowGreenApple .thGreenApple, * html body .AltRowGreenApple .thGreenApple, * html body .ControlsGreenApple .thGreenApple {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuGreenApple td {
+	font-family: Tahoma; font-size: 80%;
+}
+
+
+html>body .simpleMenuGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+} 
+
+
+/*ie6*/
+* html body .simpleMenuGreenApple td {
+	font-family: Tahoma; font-size: 100%;
+} 
+/*end*/
