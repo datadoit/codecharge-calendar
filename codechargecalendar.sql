@@ -320,7 +320,7 @@ CREATE TABLE `tbl_styles` (
 -- ----------------------------
 -- Records of tbl_styles
 -- ----------------------------
-INSERT INTO `tbl_styles` VALUES ('Apricot', '1', null, '0', '1', '1', '1', '0'), ('Basic', 'CodeChargeCalendar', null, '0', '1', '1', '1', '0'), ('Compact', 'CodeChargeCalendar', null, '0', '1', '1', '1', '0'), ('GreenApple', 'CodeChargeCalendar', null, '0', '1', '1', '1', '0'), ('SandBeach', 'CodeChargeCalendar', null, '0', '1', '1', '1', '0'), ('Simple', 'CodeChargeCalendar', null, '0', '1', '1', '1', '0');
+INSERT INTO `tbl_styles` VALUES ('Apricot', '1', null, '0', '1', '1', '1', '0'), ('Basic', '1', null, '0', '1', '1', '1', '0'), ('Compact', '1', null, '0', '1', '1', '1', '0'), ('GreenApple', '1', null, '0', '1', '1', '1', '0'), ('SandBeach', '1', null, '0', '1', '1', '1', '0'), ('Simple', '1', null, '0', '1', '1', '1', '0');
 
 -- ----------------------------
 -- Table structure for tbl_users
