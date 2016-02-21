@@ -1,0 +1,527 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- Users Begin -->
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-0A01FE2F
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit_OnClick @26-F0DC8217
+function Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit_OnClick()
+{
+    var result = true;
+//End Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit_OnClick
+
+//Confirmation Message @27-C22C3F83
+    return confirm('{res:CCS_SubmitConfirmation}');
+//End Confirmation Message
+
+//Close Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit_OnClick @26-BC33A33A
+    return result;
+}
+//End Close Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit_OnClick
+
+//Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick @132-779FEB1B
+function Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick()
+{
+    var result = true;
+//End Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick
+
+//Custom Code @135-2A29BDB7
+    // -------------------------
+
+    initUsersGridElements();  
+    for(var j = 0; j < UsersGridElements.length-UsersGridEmptyRows; j++) {  
+        if (UsersGridElements[j][UsersGridDeleteControl].checked)  
+            UsersGridElements[j][UsersGridDeleteControl].checked = false;  
+        else  
+            UsersGridElements[j][UsersGridDeleteControl].checked = true;  
+    } 
+
+    // -------------------------
+//End Custom Code
+
+//Close Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick @132-BC33A33A
+    return result;
+}
+//End Close Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick
+
+//Calendar_UsersUserAddEditButton_Delete_OnClick @45-E34C82F6
+function Calendar_UsersUserAddEditButton_Delete_OnClick()
+{
+    var result = true;
+//End Calendar_UsersUserAddEditButton_Delete_OnClick
+
+//Confirmation Message @46-1840CE41
+    return confirm('{res:CCS_DeleteConfirmation}');
+//End Confirmation Message
+
+//Close Calendar_UsersUserAddEditButton_Delete_OnClick @45-BC33A33A
+    return result;
+}
+//End Close Calendar_UsersUserAddEditButton_Delete_OnClick
+
+//Calendar_UsersUserAddEditcountry_OnChange @65-78BC1158
+function Calendar_UsersUserAddEditcountry_OnChange()
+{
+    var result = true;
+//End Calendar_UsersUserAddEditcountry_OnChange
+
+//Custom Code @157-2A29BDB7
+    // -------------------------
+
+    if (document.forms["UserAddEdit"].country.value == "1") { 
+        document.getElementById("StateRow").style.display = 'table-row';
+    }
+    else {
+        document.getElementById("StateRow").style.display = 'none';
+    }
+
+    // -------------------------
+//End Custom Code
+
+//Close Calendar_UsersUserAddEditcountry_OnChange @65-BC33A33A
+    return result;
+}
+//End Close Calendar_UsersUserAddEditcountry_OnChange
+
+//Calendar_UsersUserAddEditcountry_OnLoad @65-98036711
+function Calendar_UsersUserAddEditcountry_OnLoad()
+{
+    var result = true;
+//End Calendar_UsersUserAddEditcountry_OnLoad
+
+//Custom Code @158-2A29BDB7
+    // -------------------------
+
+    if (document.forms["UserAddEdit"].country.value == "1") { 
+        document.getElementById("StateRow").style.display = 'table-row';
+    }
+    else {
+        document.getElementById("StateRow").style.display = 'none';
+    }
+
+    // -------------------------
+//End Custom Code
+
+//Close Calendar_UsersUserAddEditcountry_OnLoad @65-BC33A33A
+    return result;
+}
+//End Close Calendar_UsersUserAddEditcountry_OnLoad
+
+//Calendar_UsersUserAddEdit_OnLoad @39-884E6B0E
+function Calendar_UsersUserAddEdit_OnLoad(form)
+{
+    var result = true;
+//End Calendar_UsersUserAddEdit_OnLoad
+
+//Set Focus @126-81405DF9
+    if (document.forms["UserAddEdit"] && document.forms["UserAddEdit"].user_login) document.forms["UserAddEdit"].user_login.focus();
+//End Set Focus
+
+//Close Calendar_UsersUserAddEdit_OnLoad @39-BC33A33A
+    return result;
+}
+//End Close Calendar_UsersUserAddEdit_OnLoad
+
+//Calendar_UsersUsersSearchButton_Clear_OnClick @8-8A14989E
+function Calendar_UsersUsersSearchButton_Clear_OnClick()
+{
+    disableValidation = true;
+}
+//End Calendar_UsersUsersSearchButton_Clear_OnClick
+
+//Calendar_UsersUsersSearchButton_Add_OnClick @9-07260CED
+function Calendar_UsersUsersSearchButton_Add_OnClick()
+{
+    disableValidation = true;
+}
+//End Calendar_UsersUsersSearchButton_Add_OnClick
+
+//Calendar_UsersUserAddEditButton_Cancel_OnClick @47-1F91F3D9
+function Calendar_UsersUserAddEditButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End Calendar_UsersUserAddEditButton_Cancel_OnClick
+
+//bind_events @1-95FF20F9
+function Calendar_Users_bind_events() {
+    addEventHandler("Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit", "click", Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit_OnClick);
+    addEventHandler("Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll", "click", Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick);
+    addEventHandler("Calendar_UsersUserAddEditButton_Delete", "click", Calendar_UsersUserAddEditButton_Delete_OnClick);
+    addEventHandler("Calendar_UsersUserAddEditcountry", "change", Calendar_UsersUserAddEditcountry_OnChange);
+    addEventHandler("Calendar_UsersUserAddEditcountry", "load", Calendar_UsersUserAddEditcountry_OnLoad);
+    addEventHandler("Calendar_UsersUserAddEdit", "load", Calendar_UsersUserAddEdit_OnLoad);
+    addEventHandler("Calendar_UsersUsersSearchButton_Clear", "click", Calendar_UsersUsersSearchButton_Clear_OnClick);
+    addEventHandler("Calendar_UsersUsersSearchButton_Add", "click", Calendar_UsersUsersSearchButton_Add_OnClick);
+    addEventHandler("Calendar_UsersUserAddEditButton_Cancel", "click", Calendar_UsersUserAddEditButton_Cancel_OnClick);
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<!-- BEGIN Record UsersSearch -->
+<form id="Calendar_UsersUsersSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 10px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td class="th"><strong>{res:CCS_SearchFormPrefix}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUsersSearchu">{res:CRM_User}</label>&nbsp;</td> 
+            <td>
+              <!-- BEGIN ListBox u -->
+              <select style="WIDTH: 210px" id="Calendar_UsersUsersSearchu" name="{u_Name}">
+                <option selected="selected" value="">{res:CRM_SelectUser}</option>
+ {u_Options} 
+              </select>
+ <!-- END ListBox u -->&nbsp;<label for="Calendar_UsersUsersSearchg">{res:CRM_Group}</label>:&nbsp; 
+              <!-- BEGIN ListBox g -->
+              <select style="WIDTH: 180px" id="Calendar_UsersUsersSearchg" name="{g_Name}">
+                <option selected="selected" value="">{res:CRM_SelectGroup}</option>
+ {g_Options} 
+              </select>
+ <!-- END ListBox g --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUsersSearchn">{res:CRM_Name}</label>&nbsp;</td> 
+            <td><input style="WIDTH: 200px" id="Calendar_UsersUsersSearchn" value="{n}" maxlength="50" name="{n_Name}" />&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;</td> 
+            <td>&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input id="Calendar_UsersUsersSearchButton_DoSearch" class="Button" value="{res:CCS_Search}" alt="{res:CCS_Search}" type="submit" name="{Button_Name}" /><!-- END Button Button_DoSearch -->
+              <!-- BEGIN Button Button_Clear --><input id="Calendar_UsersUsersSearchButton_Clear" class="Button" value="{res:CCS_Clear}" alt="Button1" type="submit" name="{Button_Name}" /><!-- END Button Button_Clear -->
+              <!-- BEGIN Button Button_Add --><input id="Calendar_UsersUsersSearchButton_Add" class="Button" value="{res:CRM_NewUser}" alt="Button1" type="submit" name="{Button_Name}" /><!-- END Button Button_Add --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record UsersSearch -->
+<!-- BEGIN EditableGrid UsersGrid -->
+<form id="Calendar_UsersUsersGrid" method="post" name="{HTMLFormName}" action="{Action}">
+  <input value="{FormState}" type="hidden" name="FormState" />{FormScript} 
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 10px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td class="th"><strong>{res:CRM_Users}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Row">
+            <td colspan="4">{res:CRM_TotalUsersFound}&nbsp;{TotalRecords}</td> 
+          </tr>
+ 
+          <!-- BEGIN Panel HeaderPanel -->
+          <tr class="Caption">
+            <!-- BEGIN Panel Header_ColumnAction -->
+            <th style="TEXT-ALIGN: center" scope="col">
+            <!-- BEGIN CheckBox CheckBox_SelectAll --><input id="Calendar_UsersUsersGridHeaderPanelHeader_ColumnActionCheckBox_SelectAll" value="1" type="checkbox" name="{CheckBox_SelectAll_Name}" {CheckBox_SelectAll} /><!-- END CheckBox CheckBox_SelectAll --></th>
+ <!-- END Panel Header_ColumnAction -->
+            <th scope="col">
+            <!-- BEGIN Sorter SorterLastName --><a href="{Sort_URL}" id="Calendar_UsersUsersGridHeaderPanelSorterLastName">{res:CRM_Name}</a> 
+            <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Asc.gif" /><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Desc.gif" /><!-- END Desc_On --><!-- END Sorter SorterLastName --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter SorterLogin --><a href="{Sort_URL}" id="Calendar_UsersUsersGridHeaderPanelSorterLogin">{res:CRM_LoginEmailAddress}</a> 
+            <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Asc.gif" /><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Desc.gif" /><!-- END Desc_On --><!-- END Sorter SorterLogin --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter SorterGroup --><a href="{Sort_URL}" id="Calendar_UsersUsersGridHeaderPanelSorterGroup">{res:CRM_Group}</a> 
+            <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Asc.gif" /><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Desc.gif" /><!-- END Desc_On --><!-- END Sorter SorterGroup --></th>
+ 
+          </tr>
+ <!-- END Panel HeaderPanel -->
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END RowError -->
+          <tr class="Row">
+            <!-- BEGIN Panel Data_ColumnAction -->
+            <td style="TEXT-ALIGN: center">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input id="Calendar_UsersUsersGridData_ColumnActionCheckBox_Delete_{UsersGrid:rowNumber}" value="1" type="checkbox" name="{CheckBox_Delete_Name}" {CheckBox_Delete} /><!-- END CheckBox CheckBox_Delete --><input id="Calendar_UsersUsersGridData_ColumnActionuser_id_{UsersGrid:rowNumber}" value="{user_id}" type="hidden" name="{user_id_Name}" /></td> <!-- END Panel Data_ColumnAction -->
+            <td><a href="{user_name_Src}" id="Calendar_UsersUsersGriduser_name_{UsersGrid:rowNumber}">{user_name}</a></td> 
+            <td>{user_login}</td> 
+            <td>{group}</td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN Separator -->
+          <tr class="Separator">
+            <td colspan="4"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ <!-- END Separator -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="4">{res:CRM_NoUsersFound}</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Panel FooterPanel -->
+              <table border="0" cellspacing="0" cellpadding="5" width="100%">
+                <tr>
+                  <td style="BORDER-BOTTOM: 0px; TEXT-ALIGN: left; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px">
+                    <!-- BEGIN Panel ActionPanel -->
+                    <!-- BEGIN ListBox action -->
+                    <select id="Calendar_UsersUsersGridFooterPanelActionPanelaction" name="{action_Name}">
+                      <option selected="selected" value="">{res:CRM_Action}</option>
+ {action_Options} 
+                    </select>
+ <!-- END ListBox action -->
+                    <!-- BEGIN Button Button_Submit --><input id="Calendar_UsersUsersGridFooterPanelActionPanelButton_Submit" class="Button" value="{res:CCS_Update}" alt="{res:CCS_Update}" type="submit" name="{Button_Name}" /><!-- END Button Button_Submit --><!-- END Panel ActionPanel --></td> 
+                  <td style="BORDER-BOTTOM: 0px; TEXT-ALIGN: right; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN Page_Parameter --><input value="{Value}" type="hidden" name="{Name}" /><!-- END Page_Parameter -->Per page: 
+                    <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                      <option selected="selected" value="">-</option>
+ {PageSize_Options} 
+                    </select>
+ 
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/First.gif" /></a> <!-- END First_On -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Prev.gif" /></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;{res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Next.gif" /></a> <!-- END Next_On -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Last.gif" /></a> <!-- END Last_On --><!-- END Navigator Navigator --></td> 
+                </tr>
+ 
+              </table>
+ <!-- END Panel FooterPanel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END EditableGrid UsersGrid -->
+<!-- BEGIN Record UserAddEdit -->
+<form id="Calendar_UsersUserAddEdit" method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 10px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td class="th"><strong>{AddEditLabel}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEdituser_login">{res:CRM_LoginEmailAddress}</label></td> 
+            <td><input style="WIDTH: 345px" id="Calendar_UsersUserAddEdituser_login" value="{user_login}" maxlength="75" name="{user_login_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditNewPassword">{res:CRM_NewPassword}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditNewPassword" value="{NewPassword}" maxlength="32" type="password" name="{NewPassword_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditConfirmNewPassword">{res:CRM_ConfirmPassword}</label>&nbsp;</td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditConfirmNewPassword" value="{ConfirmNewPassword}" maxlength="32" type="password" name="{ConfirmNewPassword_Name}" /></td> 
+          </tr>
+ 
+          <!-- BEGIN Panel ActivePanel -->
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditActivePaneluser_active">{res:CRM_Active}</label></td> 
+            <td><input id="Calendar_UsersUserAddEditActivePaneluser_active" value="1" type="checkbox" name="{user_active_Name}" {user_active} /></td> 
+          </tr>
+ <!-- END Panel ActivePanel -->
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditgroup_id">{res:CRM_Group}</label></td> 
+            <td>
+              <!-- BEGIN ListBox group_id -->
+              <select style="WIDTH: 220px" id="Calendar_UsersUserAddEditgroup_id" name="{group_id_Name}">
+                <option selected="selected" value="">{res:CRM_SelectGroup}</option>
+ {group_id_Options} 
+              </select>
+ <!-- END ListBox group_id -->{GroupLabel}</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditprefix">{res:CRM_Prefix}</label></td> 
+            <td>
+              <!-- BEGIN ListBox prefix -->
+              <select id="Calendar_UsersUserAddEditprefix" name="{prefix_Name}">
+                <option selected="selected" value=""></option>
+ {prefix_Options} 
+              </select>
+ <!-- END ListBox prefix --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditfirst_name">{res:CRM_FirstName}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditfirst_name" value="{first_name}" maxlength="50" name="{first_name_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditlast_name">{res:CRM_LastName}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditlast_name" value="{last_name}" maxlength="50" name="{last_name_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditsuffix">{res:CRM_Suffix}</label></td> 
+            <td>
+              <!-- BEGIN ListBox suffix -->
+              <select id="Calendar_UsersUserAddEditsuffix" name="{suffix_Name}">
+                <option selected="selected" value=""></option>
+ {suffix_Options} 
+              </select>
+ <!-- END ListBox suffix --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditcompany">{res:CRM_Company}</label></td> 
+            <td><input style="WIDTH: 345px" id="Calendar_UsersUserAddEditcompany" value="{company}" maxlength="75" name="{company_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEdittitle">{res:CRM_Title}</label></td> 
+            <td><input style="WIDTH: 345px" id="Calendar_UsersUserAddEdittitle" value="{title}" maxlength="50" name="{title_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditcountry">{res:CRM_Country}</label></td> 
+            <td>
+              <!-- BEGIN ListBox country -->
+              <select style="WIDTH: 220px" id="Calendar_UsersUserAddEditcountry" name="{country_Name}">
+                <option selected="selected" value="">{res:CRM_SelectCountry}</option>
+ {country_Options} 
+              </select>
+ <!-- END ListBox country --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditaddress1">{res:CRM_Address}</label></td> 
+            <td><input style="WIDTH: 345px" id="Calendar_UsersUserAddEditaddress1" value="{address1}" maxlength="100" name="{address1_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;</td> 
+            <td><input style="WIDTH: 345px" id="Calendar_UsersUserAddEditaddress2" value="{address2}" maxlength="100" name="{address2_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditcity">{res:CRM_City}</label></td> 
+            <td><input style="WIDTH: 345px" id="Calendar_UsersUserAddEditcity" value="{city}" maxlength="50" name="{city_Name}" /></td> 
+          </tr>
+ 
+          <tr id="StateRow" class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditstate">{res:CRM_State}</label></td> 
+            <td>
+              <!-- BEGIN ListBox state -->
+              <select id="Calendar_UsersUserAddEditstate" name="{state_Name}">
+                <option selected="selected" value=""></option>
+ {state_Options} 
+              </select>
+ <!-- END ListBox state --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditcounty">{res:CRM_CountyProvince}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditcounty" value="{county}" maxlength="50" name="{county_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditpost_code">{res:CRM_PostalCode}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditpost_code" value="{post_code}" maxlength="20" name="{post_code_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditphone_work">{res:CRM_WorkPhone}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditphone_work" value="{phone_work}" maxlength="50" name="{phone_work_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditphone_cell">{res:CRM_CellPhone}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditphone_cell" value="{phone_cell}" maxlength="50" name="{phone_cell_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_UsersUserAddEditfax">{res:CRM_FaxNumber}</label></td> 
+            <td><input style="WIDTH: 220px" id="Calendar_UsersUserAddEditfax" value="{fax}" maxlength="20" name="{fax_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td style="VERTICAL-ALIGN: top; PADDING-TOP: 10px" class="th"><label for="Calendar_UsersUserAddEditnotes">{res:CRM_Notes}</label></td> 
+            <td><textarea style="WIDTH: 345px" id="Calendar_UsersUserAddEditnotes" rows="3" cols="50" name="{notes_Name}">{notes}</textarea></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td style="VERTICAL-ALIGN: top; PADDING-TOP: 10px" class="th"></td> 
+            <td></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: center" colspan="2" align="center">
+              <!-- BEGIN Button Button_Insert --><input id="Calendar_UsersUserAddEditButton_Insert" class="Button" value="{res:CCS_Insert}" alt="{res:CCS_Insert}" type="submit" name="{Button_Name}" /><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input id="Calendar_UsersUserAddEditButton_Update" class="Button" value="{res:CCS_Update}" alt="{res:CCS_Update}" type="submit" name="{Button_Name}" /><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input id="Calendar_UsersUserAddEditButton_Delete" class="Button" value="{res:CCS_Delete}" alt="{res:CCS_Delete}" type="submit" name="{Button_Name}" /><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input id="Calendar_UsersUserAddEditButton_Cancel" class="Button" value="{res:CCS_Cancel}" alt="{res:CCS_Cancel}" type="submit" name="{Button_Name}" /><!-- END Button Button_Cancel --><input id="Calendar_UsersUserAddEdituser_password_Shadow" value="{user_password_Shadow}" type="hidden" name="{user_password_Shadow_Name}" /></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record UserAddEdit -->
+<!-- Users End -->

@@ -1,0 +1,122 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- Calendar YearView Begin -->
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-0A01FE2F
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//bind_events @1-27AFD1EC
+function Calendar_YearView_bind_events() {
+    if (functionExists("Calendar_Select_bind_events")) Calendar_Select_bind_events();
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          <td style="TEXT-ALIGN: center" class="th">{Calendar_Select}</td> 
+          <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+        </tr>
+ 
+      </table>
+ 
+      <!-- BEGIN Calendar Year -->
+      <table class="Calendar" cellspacing="3" cellpadding="0">
+        <tr>
+          <td class="CalendarNavigator" colspan="{MonthsInRow}">
+            <!-- BEGIN CalendarNavigator Navigator -->
+            <form method="post" action="{Action}">
+              <input value="{CalendarName}" type="hidden" name="ccsForm" />
+              <table align="center">
+                <tr>
+                  <!-- BEGIN Prev_Year -->
+                  <td><a href="{URL}" title="{res:CCS_PrevYearHint}"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Back.gif" /></a></td><!-- END Prev_Year -->
+                  <!-- BEGIN Years -->
+                  <td><label style="display: none;" for="{CalendarName}Year">Year</label> 
+                    <select id="{CalendarName}Year" onchange="this.form.submit()" name="{CalendarName}Year">
+                      <!-- BEGIN Regular_Year -->
+                      <option value="{Year}">{Year}</option>
+ <!-- END Regular_Year -->
+                      <!-- BEGIN Current_Year -->
+                      <option selected="selected" value="{Year}">{Year}</option>
+ <!-- END Current_Year -->
+                    </select>
+ </td><!-- END Years -->
+                  <!-- BEGIN Next_Year -->
+                  <td><a href="{URL}" title="{res:CCS_NextYearHint}"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Forward.gif" /></a></td><!-- END Next_Year -->
+                </tr>
+ 
+              </table>
+ 
+            </form>
+ <!-- END CalendarNavigator Navigator --></td> 
+        </tr>
+ 
+        <tr valign="top">
+          <!-- BEGIN Month -->
+          <td>
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th style="TEXT-ALIGN: center; FONT-WEIGHT: normal" colspan="7" scope="col"><!-- BEGIN Link MonthDate --><a href="{MonthDate_Src}" id="Calendar_YearViewYearMonthDate">{MonthDate}</a><!-- END Link MonthDate --></th>
+ 
+              </tr>
+ 
+              <tr>
+                <!-- BEGIN WeekDays -->
+                <th width="14.29%" scope="col" {Style}><!-- BEGIN Link DayOfWeek --><a href="{DayOfWeek_Src}" id="Calendar_YearViewYearDayOfWeek">{DayOfWeek}</a><!-- END Link DayOfWeek --></th>
+ <!-- END WeekDays -->
+              </tr>
+ 
+              <!-- BEGIN Week -->
+              <tr>
+                <!-- BEGIN Day -->
+                <td {Style}><span style="{DayNumberStyle}"><!-- BEGIN Link DayNumber --><a href="{DayNumber_Src}" id="Calendar_YearViewYearDayNumber">{DayNumber}</a><!-- END Link DayNumber --></span> 
+                  <!-- BEGIN EventRow -->
+                  <div style="DISPLAY: none" class="CalendarEvent">
+                    {EventTime} - {EventDescription} 
+                  </div>
+ <!-- END EventRow --></td><!-- END Day -->
+                <!-- BEGIN EmptyDay -->
+                <td {Style}>&nbsp;</td><!-- END EmptyDay -->
+              </tr>
+ <!-- END Week -->
+              <!-- BEGIN WeekSeparator -->
+              <tr class="Separator">
+                <td colspan="7"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+              </tr>
+ <!-- END WeekSeparator -->
+            </table>
+ </td><!-- END Month -->
+          <!-- BEGIN MonthsRowSeparator -->
+        </tr>
+ 
+        <tr valign="top">
+          <!-- END MonthsRowSeparator -->
+        </tr>
+ 
+        <tr class="Caption">
+          <th style="HEIGHT: 20px" colspan="{MonthsInRow}" scope="col"></th>
+ 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Calendar Year --><br />
+<!-- Calendar YearView End -->

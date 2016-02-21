@@ -1,0 +1,393 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- CalendarItems Begin -->
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-680BDC25
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-476971BB
+
+var ItemsSearch_DatePicker_CalEnd = new Object(); 
+ItemsSearch_DatePicker_CalEnd.format           = "mm/dd/yyyy";
+ItemsSearch_DatePicker_CalEnd.style            = "{page:pathToRoot}Styles/{CCS_Style}/Style.css";
+ItemsSearch_DatePicker_CalEnd.relativePathPart = "";
+ItemsSearch_DatePicker_CalEnd.themeVersion = "3.0";
+
+var ItemsSearch_DatePicker_CalStart = new Object(); 
+ItemsSearch_DatePicker_CalStart.format           = "mm/dd/yyyy";
+ItemsSearch_DatePicker_CalStart.style            = "{page:pathToRoot}Styles/{CCS_Style}/Style.css";
+ItemsSearch_DatePicker_CalStart.relativePathPart = "";
+ItemsSearch_DatePicker_CalStart.themeVersion = "3.0";
+
+var ItemAddEdit_DatePicker_StartDate = new Object(); 
+ItemAddEdit_DatePicker_StartDate.format           = "mm/dd/yyyy";
+ItemAddEdit_DatePicker_StartDate.style            = "{page:pathToRoot}Styles/{CCS_Style}/Style.css";
+ItemAddEdit_DatePicker_StartDate.relativePathPart = "";
+ItemAddEdit_DatePicker_StartDate.themeVersion = "3.0";
+
+var ItemAddEdit_DatePicker_EndDate = new Object(); 
+ItemAddEdit_DatePicker_EndDate.format           = "mm/dd/yyyy";
+ItemAddEdit_DatePicker_EndDate.style            = "{page:pathToRoot}Styles/{CCS_Style}/Style.css";
+ItemAddEdit_DatePicker_EndDate.relativePathPart = "";
+ItemAddEdit_DatePicker_EndDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick @28-74A8FF94
+function Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick()
+{
+    var result = true;
+//End Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick
+
+//Custom Code @104-2A29BDB7
+    // -------------------------
+
+    initItemsElements();  
+    for(var j = 0; j < ItemsElements.length-ItemsEmptyRows; j++) {  
+        if (ItemsElements[j][ItemsDeleteControl].checked)  
+            ItemsElements[j][ItemsDeleteControl].checked = false;  
+        else  
+            ItemsElements[j][ItemsDeleteControl].checked = true;  
+    } 
+
+    // -------------------------
+//End Custom Code
+
+//Close Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick @28-BC33A33A
+    return result;
+}
+//End Close Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick
+
+//Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit_OnClick @26-F4D9FEDA
+function Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit_OnClick()
+{
+    var result = true;
+//End Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit_OnClick
+
+//Confirmation Message @27-C22C3F83
+    return confirm('{res:CCS_SubmitConfirmation}');
+//End Confirmation Message
+
+//Close Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit_OnClick @26-BC33A33A
+    return result;
+}
+//End Close Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit_OnClick
+
+//Calendar_CalendarItemsItemAddEditButton_Delete_OnClick @50-182A6E02
+function Calendar_CalendarItemsItemAddEditButton_Delete_OnClick()
+{
+    var result = true;
+//End Calendar_CalendarItemsItemAddEditButton_Delete_OnClick
+
+//Confirmation Message @51-1840CE41
+    return confirm('{res:CCS_DeleteConfirmation}');
+//End Confirmation Message
+
+//Close Calendar_CalendarItemsItemAddEditButton_Delete_OnClick @50-BC33A33A
+    return result;
+}
+//End Close Calendar_CalendarItemsItemAddEditButton_Delete_OnClick
+
+//Calendar_CalendarItemsItemAddEdit_OnLoad @47-59FD3B68
+function Calendar_CalendarItemsItemAddEdit_OnLoad(form)
+{
+    var result = true;
+//End Calendar_CalendarItemsItemAddEdit_OnLoad
+
+//Set Focus @75-30F6A388
+    if (document.forms["ItemAddEdit"] && document.forms["ItemAddEdit"].calendar_id) document.forms["ItemAddEdit"].calendar_id.focus();
+//End Set Focus
+
+//Close Calendar_CalendarItemsItemAddEdit_OnLoad @47-BC33A33A
+    return result;
+}
+//End Close Calendar_CalendarItemsItemAddEdit_OnLoad
+
+//Calendar_CalendarItemsItemsSearchButton_Clear_OnClick @45-D47CC346
+function Calendar_CalendarItemsItemsSearchButton_Clear_OnClick()
+{
+    disableValidation = true;
+}
+//End Calendar_CalendarItemsItemsSearchButton_Clear_OnClick
+
+//Calendar_CalendarItemsItemsSearchButton_Add_OnClick @46-C3DD49D2
+function Calendar_CalendarItemsItemsSearchButton_Add_OnClick()
+{
+    disableValidation = true;
+}
+//End Calendar_CalendarItemsItemsSearchButton_Add_OnClick
+
+//Calendar_CalendarItemsItemAddEditButton_Cancel_OnClick @52-97C7C164
+function Calendar_CalendarItemsItemAddEditButton_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End Calendar_CalendarItemsItemAddEditButton_Cancel_OnClick
+
+//bind_events @1-9C9ED962
+function Calendar_CalendarItems_bind_events() {
+    addEventHandler("Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll", "click", Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll_OnClick);
+    addEventHandler("Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit", "click", Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit_OnClick);
+    addEventHandler("Calendar_CalendarItemsItemAddEditButton_Delete", "click", Calendar_CalendarItemsItemAddEditButton_Delete_OnClick);
+    addEventHandler("Calendar_CalendarItemsItemAddEdit", "load", Calendar_CalendarItemsItemAddEdit_OnLoad);
+    addEventHandler("Calendar_CalendarItemsItemsSearchButton_Clear", "click", Calendar_CalendarItemsItemsSearchButton_Clear_OnClick);
+    addEventHandler("Calendar_CalendarItemsItemsSearchButton_Add", "click", Calendar_CalendarItemsItemsSearchButton_Add_OnClick);
+    addEventHandler("Calendar_CalendarItemsItemAddEditButton_Cancel", "click", Calendar_CalendarItemsItemAddEditButton_Cancel_OnClick);
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<!-- BEGIN Record ItemsSearch -->
+<form id="Calendar_CalendarItemsItemsSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 10px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td class="th"><strong>{res:CCS_SearchFormPrefix}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="5">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_CalendarItemsItemsSearchc">{res:CRM_Calendar}</label>&nbsp;</td> 
+            <td colspan="4">
+              <!-- BEGIN ListBox c -->
+              <select id="Calendar_CalendarItemsItemsSearchc" name="{c_Name}">
+                <option selected="selected" value="">{res:CRM_SelectCalendar}</option>
+                {c_Options}
+              </select>
+ <!-- END ListBox c -->&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">{res:CRM_DateRange}</td> 
+            <td colspan="4"><label for="Calendar_CalendarItemsItemsSearchCalStart">{res:CRM_Start}:</label>&nbsp;<input id="Calendar_CalendarItemsItemsSearchCalStart" name="{CalStart_Name}" maxlength="100" value="{CalStart}" size="12" />
+              <!-- BEGIN DatePicker DatePicker_CalStart --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Calendar_CalendarItemsItemsSearchDatePicker_CalStart"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" id="Calendar_CalendarItemsItemsSearchDatePicker_CalStart_Image" alt="Show Date Picker" align="absMiddle" src="{page:pathToRoot}Styles/{CCS_Style}/Images/DatePicker.gif" /></a><!-- END DatePicker DatePicker_CalStart -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="Calendar_CalendarItemsItemsSearchCalEnd">{res:CRM_End}:</label>&nbsp;<input id="Calendar_CalendarItemsItemsSearchCalEnd" name="{CalEnd_Name}" maxlength="10" value="{CalEnd}" size="12" />
+              <!-- BEGIN DatePicker DatePicker_CalEnd --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Calendar_CalendarItemsItemsSearchDatePicker_CalEnd"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" id="Calendar_CalendarItemsItemsSearchDatePicker_CalEnd_Image" alt="Show Date Picker" align="absMiddle" src="{page:pathToRoot}Styles/{CCS_Style}/Images/DatePicker.gif" /></a><!-- END DatePicker DatePicker_CalEnd --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;</td> 
+            <td colspan="4">&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="5" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input id="Calendar_CalendarItemsItemsSearchButton_DoSearch" class="Button" name="{Button_Name}" alt="{res:CCS_Search}" value="{res:CCS_Search}" type="submit" /><!-- END Button Button_DoSearch -->
+              <!-- BEGIN Button Button_Clear --><input id="Calendar_CalendarItemsItemsSearchButton_Clear" class="Button" name="{Button_Name}" alt="{res:CCS_Clear}" value="{res:CCS_Clear}" type="submit" /><!-- END Button Button_Clear -->
+              <!-- BEGIN Button Button_Add --><input id="Calendar_CalendarItemsItemsSearchButton_Add" class="Button" name="{Button_Name}" alt="{res:CRM_NewCalendarItem}" value="{res:CRM_NewCalendarItem}" type="submit" /><!-- END Button Button_Add --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record ItemsSearch -->
+<!-- BEGIN EditableGrid Items -->
+<form id="Calendar_CalendarItemsItems" method="post" name="{HTMLFormName}" action="{Action}">
+  <input name="FormState" value="{FormState}" type="hidden" />{FormScript} 
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 10px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td class="th"><strong>{res:CRM_CalendarItems}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Row">
+            <td colspan="4">{res:CRM_TotalCalendarItemsFound}&nbsp;{TotalRecords}</td> 
+          </tr>
+ 
+          <!-- BEGIN Panel HeaderPanel -->
+          <tr class="Caption">
+            <!-- BEGIN Panel Header_ColumnAction -->
+            <th scope="col"><input id="Calendar_CalendarItemsItemsHeaderPanelHeader_ColumnActionCheckBox_SelectAll" name="{CheckBox_SelectAll_Name}" value="1" type="checkbox" {CheckBox_SelectAll} /></th>
+ <!-- END Panel Header_ColumnAction -->
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_calendar_item_start --><a href="{Sort_URL}" id="Calendar_CalendarItemsItemsHeaderPanelSorter_calendar_item_start">{res:CRM_DateTime}</a> 
+            <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Asc.gif" /><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Desc.gif" /><!-- END Desc_On --><!-- END Sorter Sorter_calendar_item_start -->&nbsp;</th>
+ 
+            <th colspan="2" scope="col">
+            <!-- BEGIN Sorter Sorter_calendar_item_title --><a href="{Sort_URL}" id="Calendar_CalendarItemsItemsHeaderPanelSorter_calendar_item_title">{res:CRM_CalendarItem}</a> 
+            <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Asc.gif" /><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Desc.gif" /><!-- END Desc_On --><!-- END Sorter Sorter_calendar_item_title --></th>
+ 
+          </tr>
+ <!-- END Panel HeaderPanel -->
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END RowError -->
+          <tr class="Row">
+            <!-- BEGIN Panel Data_ColumnAction -->
+            <td>
+              <!-- BEGIN CheckBox CheckBox_Delete --><input id="Calendar_CalendarItemsItemsData_ColumnActionCheckBox_Delete_{Items:rowNumber}" name="{CheckBox_Delete_Name}" value="1" type="checkbox" {CheckBox_Delete} /><!-- END CheckBox CheckBox_Delete --><input id="Calendar_CalendarItemsItemsData_ColumnActioncalendar_item_id_{Items:rowNumber}" name="{calendar_item_id_Name}" value="{calendar_item_id}" type="hidden" /></td> <!-- END Panel Data_ColumnAction -->
+            <td>{calendar_item_start} - {calendar_item_end}&nbsp;</td> 
+            <td colspan="2"><a href="{calendar_item_title_Src}" id="Calendar_CalendarItemsItemscalendar_item_title_{Items:rowNumber}">{calendar_item_title}</a>&nbsp;</td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN Separator -->
+          <tr class="Separator">
+            <td colspan="4"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ <!-- END Separator -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="4">{res:CRM_NoCalendarItemsFound}</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Panel FooterPanel -->
+              <table border="0" cellspacing="0" cellpadding="5" width="100%">
+                <tr>
+                  <td style="BORDER-BOTTOM: 0px; TEXT-ALIGN: left; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px">
+                    <!-- BEGIN Panel ActionPanel -->
+                    <!-- BEGIN ListBox action -->
+                    <select id="Calendar_CalendarItemsItemsFooterPanelActionPanelaction" name="{action_Name}">
+                      <option selected="selected" value="">{res:CRM_Action}</option>
+                      {action_Options}
+                    </select>
+ <!-- END ListBox action -->
+                    <!-- BEGIN Button Button_Submit --><input id="Calendar_CalendarItemsItemsFooterPanelActionPanelButton_Submit" class="Button" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}" type="submit" /><!-- END Button Button_Submit --><!-- END Panel ActionPanel --></td> 
+                  <td style="BORDER-BOTTOM: 0px; TEXT-ALIGN: right; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN Page_Parameter --><input name="{Name}" value="{Value}" type="hidden" /><!-- END Page_Parameter -->Per page: 
+                    <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                      <option selected="selected" value="">-</option>
+ {PageSize_Options} 
+                    </select>
+ 
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" alt="{First_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/First.gif" /></a> <!-- END First_On -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" alt="{Prev_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Prev.gif" /></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;{res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" alt="{Next_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Next.gif" /></a> <!-- END Next_On -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" alt="{Last_URL}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Last.gif" /></a> <!-- END Last_On --><!-- END Navigator Navigator --></td> 
+                </tr>
+ 
+              </table>
+ <!-- END Panel FooterPanel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END EditableGrid Items -->
+<!-- BEGIN Record ItemAddEdit -->
+<form id="Calendar_CalendarItemsItemAddEdit" method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 15px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td class="th"><strong>{AddEditLabel}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_CalendarItemsItemAddEditcalendar_id">{res:CRM_Calendar}</label></td> 
+            <td>
+              <select style="WIDTH: 233px" id="Calendar_CalendarItemsItemAddEditcalendar_id" name="{calendar_id_Name}">
+                <option selected="selected" value="">{res:CRM_SelectCalendar}</option>
+                {calendar_id_Options}
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_CalendarItemsItemAddEditStartDate">{res:CRM_StartDateTime}</label></td> 
+            <td><input id="Calendar_CalendarItemsItemAddEditStartDate" name="{StartDate_Name}" maxlength="10" value="{StartDate}" size="12" />
+              <!-- BEGIN DatePicker DatePicker_StartDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Calendar_CalendarItemsItemAddEditDatePicker_StartDate"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" id="Calendar_CalendarItemsItemAddEditDatePicker_StartDate_Image" alt="Show Date Picker" align="absMiddle" src="{page:pathToRoot}Styles/{CCS_Style}/Images/DatePicker.gif" /></a><!-- END DatePicker DatePicker_StartDate -->
+              <!-- BEGIN ListBox StartTime -->
+              <select id="Calendar_CalendarItemsItemAddEditStartTime" name="{StartTime_Name}">
+                <option selected="selected" value="">{res:CRM_SelectTime}</option>
+                {StartTime_Options}
+              </select>
+ <!-- END ListBox StartTime --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_CalendarItemsItemAddEditEndDate">{res:CRM_EndDateTime}</label></td> 
+            <td><input id="Calendar_CalendarItemsItemAddEditEndDate" name="{EndDate_Name}" maxlength="10" value="{EndDate}" size="12" />
+              <!-- BEGIN DatePicker DatePicker_EndDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Calendar_CalendarItemsItemAddEditDatePicker_EndDate"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" id="Calendar_CalendarItemsItemAddEditDatePicker_EndDate_Image" alt="Show Date Picker" align="absMiddle" src="{page:pathToRoot}Styles/{CCS_Style}/Images/DatePicker.gif" /></a><!-- END DatePicker DatePicker_EndDate -->
+              <!-- BEGIN ListBox EndTime -->
+              <select id="Calendar_CalendarItemsItemAddEditEndTime" name="{EndTime_Name}">
+                <option selected="selected" value="">{res:CRM_SelectTime}</option>
+                {EndTime_Options}
+              </select>
+ <!-- END ListBox EndTime --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_CalendarItemsItemAddEditcalendar_item_title">{res:CRM_Title}</label></td> 
+            <td><input style="WIDTH: 375px" id="Calendar_CalendarItemsItemAddEditcalendar_item_title" name="{calendar_item_title_Name}" maxlength="100" value="{calendar_item_title}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td style="VERTICAL-ALIGN: top; PADDING-TOP: 10px" class="th"><label for="Calendar_CalendarItemsItemAddEditcalendar_item_description">{res:CRM_Description}</label></td> 
+            <td><textarea style="WIDTH: 375px" id="Calendar_CalendarItemsItemAddEditcalendar_item_description" cols="59" rows="8" name="{calendar_item_description_Name}">{calendar_item_description}</textarea></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: center" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input id="Calendar_CalendarItemsItemAddEditButton_Insert" class="Button" name="{Button_Name}" alt="{res:CCS_Insert}" value="{res:CCS_Insert}" type="submit" /><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input id="Calendar_CalendarItemsItemAddEditButton_Update" class="Button" name="{Button_Name}" alt="{res:CCS_Update}" value="{res:CCS_Update}" type="submit" /><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input id="Calendar_CalendarItemsItemAddEditButton_Delete" class="Button" name="{Button_Name}" alt="{res:CCS_Delete}" value="{res:CCS_Delete}" type="submit" /><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input id="Calendar_CalendarItemsItemAddEditButton_Cancel" class="Button" name="{Button_Name}" alt="{res:CCS_Cancel}" value="{res:CCS_Cancel}" type="submit" /><!-- END Button Button_Cancel --><input id="Calendar_CalendarItemsItemAddEditcalendar_item_start" name="{calendar_item_start_Name}" value="{calendar_item_start}" type="hidden" /><input id="Calendar_CalendarItemsItemAddEditcalendar_item_end" name="{calendar_item_end_Name}" value="{calendar_item_end}" type="hidden" /><input id="Calendar_CalendarItemsItemAddEditcalendar_item_entered_by" name="{calendar_item_entered_by_Name}" value="{calendar_item_entered_by}" type="hidden" /><input id="Calendar_CalendarItemsItemAddEditcalendar_item_entered_date" name="{calendar_item_entered_date_Name}" value="{calendar_item_entered_date}" type="hidden" /><input id="Calendar_CalendarItemsItemAddEditcalendar_item_updated_by" name="{calendar_item_updated_by_Name}" value="{calendar_item_updated_by}" type="hidden" /><input id="Calendar_CalendarItemsItemAddEditcalendar_item_updated_date" name="{calendar_item_updated_date_Name}" value="{calendar_item_updated_date}" type="hidden" /></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record ItemAddEdit -->
+<!-- CalendarItems End -->

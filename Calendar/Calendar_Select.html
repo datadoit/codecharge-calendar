@@ -1,0 +1,49 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-0A01FE2F
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//Calendar_SelectCalendarFormc_OnChange @3-1564B557
+function Calendar_SelectCalendarFormc_OnChange()
+{
+    var result = true;
+//End Calendar_SelectCalendarFormc_OnChange
+
+//Submit Form @4-F700A9BD
+    document.forms["CalendarForm"].submit();
+//End Submit Form
+
+//Close Calendar_SelectCalendarFormc_OnChange @3-BC33A33A
+    return result;
+}
+//End Close Calendar_SelectCalendarFormc_OnChange
+
+//bind_events @1-AC184022
+function Calendar_Select_bind_events() {
+    addEventHandler("Calendar_SelectCalendarFormc", "change", Calendar_SelectCalendarFormc_OnChange);
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<!-- BEGIN Record CalendarForm -->
+<form id="Calendar_SelectCalendarForm" method="post" name="{HTMLFormName}" action="{Action}">
+  <!-- BEGIN ListBox c -->
+  <select id="Calendar_SelectCalendarFormc" name="{c_Name}">
+    <option selected="selected" value="">{res:CRM_SelectCalendar}</option>
+    {c_Options}
+  </select>
+ <!-- END ListBox c -->
+</form>
+<!-- END Record CalendarForm -->

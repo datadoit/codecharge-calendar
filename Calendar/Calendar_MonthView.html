@@ -1,0 +1,443 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- Calendar MonthView Begin -->
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-680BDC25
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//Include User Scripts @1-97F82FDC
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/pt/ajaxpanel.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/pt/prototype_ccs.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Calendar/Calendar_MonthView_style.css" />
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-1F47EEBA
+
+var EventDetailRecord_DatePicker_StartDate = new Object(); 
+EventDetailRecord_DatePicker_StartDate.format           = "mm/dd/yyyy";
+EventDetailRecord_DatePicker_StartDate.style            = "{page:pathToRoot}Styles/{CCS_Style}/Style.css";
+EventDetailRecord_DatePicker_StartDate.relativePathPart = "";
+EventDetailRecord_DatePicker_StartDate.themeVersion = "3.0";
+
+var EventDetailRecord_DatePicker_EndDate = new Object(); 
+EventDetailRecord_DatePicker_EndDate.format           = "mm/dd/yyyy";
+EventDetailRecord_DatePicker_EndDate.style            = "{page:pathToRoot}Styles/{CCS_Style}/Style.css";
+EventDetailRecord_DatePicker_EndDate.relativePathPart = "";
+EventDetailRecord_DatePicker_EndDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//Calendar_MonthViewEventDetailPanelEventDetailRecord_OnLoad @36-93820D9A
+function Calendar_MonthViewEventDetailPanelEventDetailRecord_OnLoad(form)
+{
+    var result = true;
+//End Calendar_MonthViewEventDetailPanelEventDetailRecord_OnLoad
+
+//Custom Code @54-2A29BDB7
+    // -------------------------
+
+    if (document.getElementById("errors") == null) {
+        Calendar_MonthViewEventDetailPanelShowModal1_hide();
+        Calendar_MonthViewCalendarPanelUpdatePanel1_refresh();
+    }
+    else {
+        Calendar_MonthViewEventDetailPanelShowModal1_show();
+    }
+
+    $("Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Close").onclick = function()
+        {
+            Calendar_MonthViewEventDetailPanelUpdatePanel_refresh();
+            Calendar_MonthViewEventDetailPanelShowModal1_hide();
+            return false;
+        }
+
+    // -------------------------
+//End Custom Code
+
+//Close Calendar_MonthViewEventDetailPanelEventDetailRecord_OnLoad @36-BC33A33A
+    return result;
+}
+//End Close Calendar_MonthViewEventDetailPanelEventDetailRecord_OnLoad
+
+//Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Close_OnClick @41-A807EE85
+function Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Close_OnClick()
+{
+    disableValidation = true;
+}
+//End Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Close_OnClick
+
+//Start Calendar_MonthViewEventDetailPanel @34-B3A81D4C
+function Calendar_MonthViewEventDetailPanel_start(sender) {
+    var panel = $("Calendar_MonthViewEventDetailPanel");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Calendar_MonthViewEventDetailPanel_bind(sender);
+}
+//End Start Calendar_MonthViewEventDetailPanel
+
+//Refresh Calendar_MonthViewEventDetailPanel @34-8C30F4EB
+function Calendar_MonthViewEventDetailPanel_bind(sender) {
+    addEventHandler("Calendar_MonthViewEventDetailPanelEventDetailRecord", "load", Calendar_MonthViewEventDetailPanelEventDetailRecord_OnLoad);
+    addEventHandler("Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Close", "click", Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Close_OnClick);
+    document.getElementById("Calendar_MonthViewEventDetailPanel").className="ModalShowDiv";
+}
+//End Refresh Calendar_MonthViewEventDetailPanel
+
+//Refresh Calendar_MonthViewEventDetailPanelUpdatePanel @35-D9E338CF
+function Calendar_MonthViewEventDetailPanelUpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Calendar_MonthViewEventDetailPanel"));
+}
+//End Refresh Calendar_MonthViewEventDetailPanelUpdatePanel
+
+//Initialize Calendar_MonthViewEventDetailPanelShowModal1 @53-834C8D96
+function Calendar_MonthViewEventDetailPanelShowModal1_hide() {
+    removeOpacity();
+    el = document.getElementById("Calendar_MonthViewEventDetailPanel");
+    el.style.display = "none";
+}
+function Calendar_MonthViewEventDetailPanelShowModal1_show() {
+    addOpacity();
+    el = document.getElementById("Calendar_MonthViewEventDetailPanel");
+    el.style.display = "block";
+}
+//End Initialize Calendar_MonthViewEventDetailPanelShowModal1
+
+//Start Calendar_MonthViewCalendarPanel @55-CB4CDDAD
+function Calendar_MonthViewCalendarPanel_start(sender) {
+    var panel = $("Calendar_MonthViewCalendarPanel");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Calendar_MonthViewCalendarPanel_bind(sender);
+}
+//End Start Calendar_MonthViewCalendarPanel
+
+//Refresh Calendar_MonthViewCalendarPanel @55-BB448733
+function Calendar_MonthViewCalendarPanel_bind(sender) {
+}
+//End Refresh Calendar_MonthViewCalendarPanel
+
+//Refresh Calendar_MonthViewCalendarPanelUpdatePanel1 @56-6C2853A5
+function Calendar_MonthViewCalendarPanelUpdatePanel1_refresh(sender) {
+    AjaxPanel.reload($("Calendar_MonthViewCalendarPanel"));
+}
+//End Refresh Calendar_MonthViewCalendarPanelUpdatePanel1
+
+//bind_events @1-564D3985
+function Calendar_MonthView_bind_events() {
+    if (functionExists("Calendar_Select_bind_events")) Calendar_Select_bind_events();
+    Calendar_MonthViewEventDetailPanel_start(window);
+    Calendar_MonthViewCalendarPanel_start(window);
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/dateformat.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Custom Javascript Functions.
+
+function ShowModal(link) {
+    
+    $("Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_id").value = gup('id', link);
+    
+    //Don't know how to use CCS features for retrieving AJAX data at this point, so we'll do
+    //it the non-CCS way, but still use Prototype.
+
+    var url = 'Calendar/Calendar_AJAX_GetEvent.php?';
+    var pars = 'id=' + $("Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_id").value;
+
+    new Ajax.Request(url, {method: 'get', parameters: pars, onComplete: showResponse});
+    
+    function showResponse(originalRequest) {
+
+        xmlDoc = originalRequest.responseXML;
+        $("Calendar_MonthViewEventDetailPanelEventDetailRecordCalendarName").innerHTML = xmlDoc.getElementsByTagName("calendar_name")[0].childNodes[0].nodeValue;
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelStartDate")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelStartDate").value = dateFormat(xmlDoc.getElementsByTagName("calendar_item_start")[0].childNodes[0].nodeValue.replace(/-/g, '/'), "mm/dd/yyyy");
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelStartTime")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelStartTime").value = dateFormat(xmlDoc.getElementsByTagName("calendar_item_start")[0].childNodes[0].nodeValue.replace(/-/g, '/'), "HH:MM:ss");
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimeLabelPanelStartDateTimeLabel")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimeLabelPanelStartDateTimeLabel").innerHTML = dateFormat(xmlDoc.getElementsByTagName("calendar_item_start")[0].childNodes[0].nodeValue.replace(/-/g, '/'), "dddd, mmmm dS, yyyy, h:MM TT");
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelEndDate")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelEndDate").value = dateFormat(xmlDoc.getElementsByTagName("calendar_item_end")[0].childNodes[0].nodeValue.replace(/-/g, '/'), "mm/dd/yyyy");
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelEndTime")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelEndTime").value = dateFormat(xmlDoc.getElementsByTagName("calendar_item_end")[0].childNodes[0].nodeValue.replace(/-/g, '/'), "HH:MM:ss");
+        }
+        
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimeLabelPanelEndDateTimeLabel")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimeLabelPanelEndDateTimeLabel").innerHTML = dateFormat(xmlDoc.getElementsByTagName("calendar_item_end")[0].childNodes[0].nodeValue.replace(/-/g, '/'), "dddd, mmmm dS, yyyy, h:MM TT");
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_title")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_title").value = xmlDoc.getElementsByTagName("calendar_item_title")[0].childNodes[0].nodeValue;
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordTitleLabelPanelTitleLabel")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordTitleLabelPanelTitleLabel").innerHTML = xmlDoc.getElementsByTagName("calendar_item_title")[0].childNodes[0].nodeValue;
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_description")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_description").value = xmlDoc.getElementsByTagName("calendar_item_description")[0].childNodes[0].nodeValue;
+        }
+
+        if ($("Calendar_MonthViewEventDetailPanelEventDetailRecordDescriptionLabelPanelDescriptionLabel")) {
+            $("Calendar_MonthViewEventDetailPanelEventDetailRecordDescriptionLabelPanelDescriptionLabel").innerHTML = xmlDoc.getElementsByTagName("calendar_item_description")[0].childNodes[0].nodeValue;
+        }
+
+        $("Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_id").value = xmlDoc.getElementsByTagName("calendar_id")[0].childNodes[0].nodeValue;
+        
+    }
+
+    Calendar_MonthViewEventDetailPanelShowModal1_show();
+
+}
+
+
+function gup( name, url )
+{
+    // From: http://www.netlobo.com/url_query_string_javascript.html
+    // Gets the value of the URL parameter.
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    if( results == null )
+        return "";
+    else
+        return results[1];
+}
+
+//--><!]]>
+</script>
+<!-- BEGIN Panel CalendarPanel -->
+<table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          <td style="TEXT-ALIGN: center" class="th">{Calendar_Select}</td> 
+          <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+        </tr>
+ 
+      </table>
+ 
+      <!-- BEGIN Calendar Cal -->
+      <table class="Calendar" cellspacing="3" cellpadding="0">
+        <tr>
+          <td style="HEIGHT: 30px" class="CalendarNavigator" colspan="{MonthsInRow}">
+            <!-- BEGIN CalendarNavigator Navigator -->
+            <form method="post" action="{Action}">
+              <input value="{CalendarName}" type="hidden" name="ccsForm" />
+              <table align="center">
+                <tr>
+                  <!-- BEGIN Prev_Year -->
+                  <td><a href="{URL}" title="{res:CCS_PrevYearHint}"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Back.gif" /></a></td><!-- END Prev_Year -->
+                  <!-- BEGIN Prev -->
+                  <td><a href="{URL}" title="{res:CCS_PrevMonthHint}"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Prev.gif" /></a></td><!-- END Prev -->
+                  <!-- BEGIN Months -->
+                  <td><label style="display: none;" for="{CalendarName}Month">Month</label> 
+                    <select id="{CalendarName}Month" onchange="this.form.submit()" name="{CalendarName}Month">
+                      <!-- BEGIN Regular_Month -->
+                      <option value="{Month}">{MonthFullName}</option>
+ <!-- END Regular_Month -->
+                      <!-- BEGIN Current_Month -->
+                      <option selected="selected" value="{Month}">{MonthFullName}</option>
+ <!-- END Current_Month -->
+                    </select>
+ </td><!-- END Months -->
+                  <!-- BEGIN Years -->
+                  <td><label style="display: none;" for="{CalendarName}Year">Year</label> 
+                    <select id="{CalendarName}Year" onchange="this.form.submit()" name="{CalendarName}Year">
+                      <!-- BEGIN Regular_Year -->
+                      <option value="{Year}">{Year}</option>
+ <!-- END Regular_Year -->
+                      <!-- BEGIN Current_Year -->
+                      <option selected="selected" value="{Year}">{Year}</option>
+ <!-- END Current_Year -->
+                    </select>
+ </td><!-- END Years -->
+                  <!-- BEGIN Next -->
+                  <td><a href="{URL}" title="{res:CCS_NextMonthHint}"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Next.gif" /></a></td><!-- END Next -->
+                  <!-- BEGIN Next_Year -->
+                  <td><a href="{URL}" title="{res:CCS_NextYearHint}"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Forward.gif" /></a></td><!-- END Next_Year -->
+                </tr>
+ 
+              </table>
+ 
+            </form>
+ <!-- END CalendarNavigator Navigator --></td> 
+        </tr>
+ 
+        <tr valign="top">
+          <!-- BEGIN Month -->
+          <td>
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr>
+                <!-- BEGIN WeekDays -->
+                <th style="HEIGHT: 20px" width="14.29%" scope="col" {Style}><!-- BEGIN Link DayOfWeek --><a href="{DayOfWeek_Src}" id="Calendar_MonthViewCalendarPanelCalDayOfWeek">{DayOfWeek}</a><!-- END Link DayOfWeek --></th>
+ <!-- END WeekDays -->
+              </tr>
+ 
+              <!-- BEGIN Week -->
+              <tr>
+                <!-- BEGIN Day -->
+                <td style="TEXT-ALIGN: right; HEIGHT: 50px; VERTICAL-ALIGN: top" {Style}><!-- BEGIN Link DayNumber --><a href="{DayNumber_Src}" id="Calendar_MonthViewCalendarPanelCalDayNumber">{DayNumber}</a><!-- END Link DayNumber --> 
+                  <!-- BEGIN EventRow --><input id="Calendar_MonthViewCalendarPanelCalcalendar_item_id" value="{calendar_item_id}" type="hidden" name="{calendar_item_id_Name}" /><input id="Calendar_MonthViewCalendarPanelCalcalendar_item_start" value="{calendar_item_start}" type="hidden" name="{calendar_item_start_Name}" /><input id="Calendar_MonthViewCalendarPanelCalcalendar_item_end" value="{calendar_item_end}" type="hidden" name="{calendar_item_end_Name}" /><input id="Calendar_MonthViewCalendarPanelCalcalendar_item_title" value="{calendar_item_title}" type="hidden" name="{calendar_item_title_Name}" /><input id="Calendar_MonthViewCalendarPanelCalcalendar_item_description" value="{calendar_item_description}" type="hidden" name="{calendar_item_description_Name}" />
+                  <div class="CalendarEvent">
+                    <!-- BEGIN Panel EventPanel -->
+                    <!-- BEGIN Link EventLink --><a href="{EventLink_Src}" id="Calendar_MonthViewCalendarPanelCalEventPanelEventLink" title="Tooltip" onclick="ShowModal(this.href); return false;">{EventLink}</a><!-- END Link EventLink --><!-- END Panel EventPanel -->
+                  </div>
+ <!-- END EventRow --></td><!-- END Day -->
+                <!-- BEGIN EmptyDay -->
+                <td {Style}>&nbsp;</td><!-- END EmptyDay -->
+              </tr>
+ <!-- END Week -->
+              <!-- BEGIN WeekSeparator -->
+              <tr class="Separator">
+                <td colspan="7"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+              </tr>
+ <!-- END WeekSeparator -->
+              <tr class="Caption">
+                <th style="HEIGHT: 20px" colspan="7" scope="col"></th>
+ 
+              </tr>
+ 
+            </table>
+ </td><!-- END Month -->
+          <!-- BEGIN MonthsRowSeparator -->
+        </tr>
+ 
+        <tr valign="top">
+          <!-- END MonthsRowSeparator -->
+        </tr>
+ 
+      </table>
+ <!-- END Calendar Cal --></td> 
+  </tr>
+</table>
+<!-- END Panel CalendarPanel -->
+<!-- BEGIN Panel EventDetailPanel -->
+<!-- BEGIN Record EventDetailRecord -->
+<form id="Calendar_MonthViewEventDetailPanelEventDetailRecord" method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td style="TEXT-ALIGN: center" class="th"><strong>{res:CRM_CalendarItemDetail}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td id="errors" colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_MonthViewEventDetailPanelEventDetailRecordCalendarName">{res:CRM_Calendar}</label></td> 
+            <td><span id="Calendar_MonthViewEventDetailPanelEventDetailRecordCalendarName">{CalendarName}</span></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelStartDate">{res:CRM_StartDateTime}</label></td> 
+            <td>
+              <!-- BEGIN Panel StartDateTimePanel --><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelStartDate" value="{StartDate}" maxlength="10" size="12" name="{StartDate_Name}" />
+              <!-- BEGIN DatePicker DatePicker_StartDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelDatePicker_StartDate"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" id="Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelDatePicker_StartDate_Image" alt="Show Date Picker" src="{page:pathToRoot}Styles/{CCS_Style}/Images/DatePicker.gif" /></a><!-- END DatePicker DatePicker_StartDate -->&nbsp; 
+              <!-- BEGIN ListBox StartTime -->
+              <select id="Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimePanelStartTime" name="{StartTime_Name}">
+                <option selected="selected" value="">{res:CCS_SelectValue}</option>
+ {StartTime_Options} 
+              </select>
+ <!-- END ListBox StartTime --><!-- END Panel StartDateTimePanel -->
+              <!-- BEGIN Panel StartDateTimeLabelPanel --><span id="Calendar_MonthViewEventDetailPanelEventDetailRecordStartDateTimeLabelPanelStartDateTimeLabel">{StartDateTimeLabel}</span><!-- END Panel StartDateTimeLabelPanel --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelEndDate">{res:CRM_EndDateTime}</label></td> 
+            <td>
+              <!-- BEGIN Panel EndDateTimePanel --><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelEndDate" value="{EndDate}" maxlength="10" size="12" name="{EndDate_Name}" />
+              <!-- BEGIN DatePicker DatePicker_EndDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelDatePicker_EndDate"><img style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" id="Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelDatePicker_EndDate_Image" alt="Show Date Picker" src="{page:pathToRoot}Styles/{CCS_Style}/Images/DatePicker.gif" /></a><!-- END DatePicker DatePicker_EndDate -->&nbsp; 
+              <!-- BEGIN ListBox EndTime -->
+              <select id="Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimePanelEndTime" name="{EndTime_Name}">
+                <option selected="selected" value="">{res:CCS_SelectValue}</option>
+ {EndTime_Options} 
+              </select>
+ <!-- END ListBox EndTime --><!-- END Panel EndDateTimePanel -->
+              <!-- BEGIN Panel EndDateTimeLabelPanel --><span id="Calendar_MonthViewEventDetailPanelEventDetailRecordEndDateTimeLabelPanelEndDateTimeLabel">{EndDateTimeLabel}</span><!-- END Panel EndDateTimeLabelPanel --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_title">{res:CRM_Title}</label></td> 
+            <td>
+              <!-- BEGIN TextBox calendar_item_title --><input style="WIDTH: 375px" id="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_title" value="{calendar_item_title}" maxlength="100" name="{calendar_item_title_Name}" /><!-- END TextBox calendar_item_title -->
+              <!-- BEGIN Panel TitleLabelPanel --><span id="Calendar_MonthViewEventDetailPanelEventDetailRecordTitleLabelPanelTitleLabel">{TitleLabel}</span><!-- END Panel TitleLabelPanel --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td style="VERTICAL-ALIGN: top; PADDING-TOP: 10px" class="th"><label for="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_description">{res:CRM_Description}</label></td> 
+            <td>
+              <!-- BEGIN TextArea calendar_item_description --><textarea style="WIDTH: 375px" id="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_description" rows="8" cols="59" name="{calendar_item_description_Name}">{calendar_item_description}</textarea><!-- END TextArea calendar_item_description -->
+              <!-- BEGIN Panel DescriptionLabelPanel --><span style="DISPLAY: block; PADDING-TOP: 7px" id="Calendar_MonthViewEventDetailPanelEventDetailRecordDescriptionLabelPanelDescriptionLabel">{DescriptionLabel}</span><!-- END Panel DescriptionLabelPanel --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"></td> 
+            <td><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_id" value="{calendar_item_id}" type="hidden" name="{calendar_item_id_Name}" /><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_id" value="{calendar_id}" type="hidden" name="{calendar_id_Name}" /><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_start" value="{calendar_item_start}" type="hidden" name="{calendar_item_start_Name}" /><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordcalendar_item_end" value="{calendar_item_end}" type="hidden" name="{calendar_item_end_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: center" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Insert" class="Button" value="{res:CRM_SaveChanges}" alt="{res:CRM_SaveChanges}" type="submit" name="{Button_Name}" /><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Close --><input id="Calendar_MonthViewEventDetailPanelEventDetailRecordButton_Close" class="Button" value="{res:CRM_Close}" alt="{res:CRM_Close}" type="submit" name="{Button_Name}" /><!-- END Button Button_Close --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record EventDetailRecord --><!-- END Panel EventDetailPanel -->
+<!-- Calendar MonthView End -->

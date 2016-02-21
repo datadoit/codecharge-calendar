@@ -1,0 +1,93 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- Settings Begin -->
+<!-- BEGIN Record Settings -->
+<form id="Calendar_SettingsSettings" method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 10px; WIDTH: 500px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            <td class="th"><strong>{res:CRM_Settings}</strong></td> 
+            <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_SettingsSettingsactive">{res:CRM_Active}</label></td> 
+            <td><input id="Calendar_SettingsSettingsactive" value="1" type="checkbox" name="{active_Name}" {active} /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_SettingsSettingsinactive_message">{res:CRM_InactiveMessage}</label></td> 
+            <td><input id="Calendar_SettingsSettingsinactive_message" value="{inactive_message}" maxlength="250" size="50" name="{inactive_message_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_SettingsSettingsdefault_style">{res:CRM_DefaultStyle}</label></td> 
+            <td>
+              <!-- BEGIN ListBox default_style -->
+              <select id="Calendar_SettingsSettingsdefault_style" name="{default_style_Name}">
+                <option selected="selected" value="">{res:CCS_SelectValue}</option>
+ {default_style_Options} 
+              </select>
+ <!-- END ListBox default_style --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_SettingsSettingsdefault_locale">{res:CRM_DefaultLocale}</label></td> 
+            <td>
+              <!-- BEGIN ListBox default_locale -->
+              <select id="Calendar_SettingsSettingsdefault_locale" name="{default_locale_Name}">
+                <option selected="selected" value="">{res:CCS_SelectValue}</option>
+ {default_locale_Options} 
+              </select>
+ <!-- END ListBox default_locale --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_SettingsSettingssite_title">{res:CRM_SiteTitle}</label></td> 
+            <td><input id="Calendar_SettingsSettingssite_title" value="{site_title}" maxlength="50" size="50" name="{site_title_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_SettingsSettingssite_subtitle">{res:CRM_SiteSubtitle}</label></td> 
+            <td><input id="Calendar_SettingsSettingssite_subtitle" value="{site_subtitle}" maxlength="100" size="50" name="{site_subtitle_Name}" /></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Calendar_SettingsSettingsdefault_calendar_view">{res:CRM_DefaultCalendarView}</label></td> 
+            <td>
+              <!-- BEGIN ListBox default_calendar_view -->
+              <select id="Calendar_SettingsSettingsdefault_calendar_view" name="{default_calendar_view_Name}">
+                <option selected="selected" value="">{res:CCS_SelectValue}</option>
+ {default_calendar_view_Options} 
+              </select>
+ <!-- END ListBox default_calendar_view --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;</td> 
+            <td>&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: center" colspan="2">
+              <!-- BEGIN Button Button_Update --><input id="Calendar_SettingsSettingsButton_Update" class="Button" value="{res:CCS_Update}" alt="{res:CCS_Update}" type="submit" name="{Button_Name}" /><!-- END Button Button_Update --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record Settings -->
+<!-- Settings End -->
