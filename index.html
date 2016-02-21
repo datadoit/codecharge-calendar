@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+<title>{SiteTitle}</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676" />
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/extras.css" />
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/{CCS_Style}/Style_doctype.css" />
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-F6D184C6
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//bind_events @1-A5A7B64C
+function bind_events() {
+    if (functionExists("header_bind_events")) header_bind_events();
+    if (functionExists("topmenu_bind_events")) topmenu_bind_events();
+    if (functionExists("leftcolumn_bind_events")) leftcolumn_bind_events();
+    if (functionExists("content_bind_events")) content_bind_events();
+    if (functionExists("footer_bind_events")) footer_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+//End CCS script
+
+//--><!]]>
+</script>
+</head>
+<body style="margin: 0px;">
+<div id="nonFooter">
+  <div id="pagecontent">
+    {header}{topmenu}{leftcolumn}{content} 
+  </div>
+</div>
+<div id="pagefooter">
+  {footer} 
+</div>
+</body>
+</html>
