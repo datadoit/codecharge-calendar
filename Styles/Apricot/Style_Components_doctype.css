@@ -1,0 +1,1224 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorApricot {
+	background-color: #e6cfb8;
+	}
+
+.FormTitleBgColorApricot {
+	background-color: #df7637;
+	}
+
+.FormTitleFontColorApricot {
+	color: #ffffff;
+	}
+
+.CaptionBgColorApricot {
+	background-color: #fad27d;
+	}
+
+.CaptionFontColorApricot {
+	color: #000000;
+	}
+
+.DataBgColorApricot {
+	background-color: #f7f7f7;
+	}
+
+.AltDataBgColorApricot {
+	background-color: #f7f4e6;
+	}
+
+.DataFontColorApricot {
+	color: #000000;
+	}
+
+.LinkColorApricot {
+	color: #0033cc;
+	}
+
+.VisitedLinkColorApricot {
+	color: #800000;
+	}
+
+.HoverLinkColorApricot {
+	color: #ff0000;
+	}
+
+.ColorBgButtonApricot {
+	background-color: #df7637;
+}
+
+.ColorFontButtonApricot {
+	color: #ffffff;
+}
+
+.ColorBgButtonPassiveApricot {
+	background-color: #ffb58b;
+}
+
+.ColorFontButtonPassiveApricot {
+	color: #ffffff;
+}
+
+
+
+.HeaderApricot {
+	width: 100%;
+	}
+
+.HeaderApricot th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 3px;
+	background-color: #df7637; color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+	
+	}
+
+
+html>body .HeaderApricot th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderApricot th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.HeaderApricot a:link { 
+	color: #ffffff;
+	}
+
+.HeaderApricot a:visited { 
+	color: #ffffff;
+	}
+
+.HeaderApricot a:hover, .CaptionApricot a:active { 
+	color: #ffffff; text-decoration: none;
+	}
+
+.HeaderLeftApricot { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightApricot { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftApricot img{
+	width: 9px;
+	}
+
+.HeaderRightApricot img{
+	width: 9px;
+	}
+
+
+/* Grid Options */
+.GridApricot { 
+	border: 1px solid #df7637;
+	width: 100%;
+	}
+
+.CaptionApricot th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #fad27d; color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionApricot td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #fad27d; color: #000000;
+	white-space: nowrap;
+	}
+
+
+html>body .CaptionApricot th, html>body .CaptionApricot td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionApricot th, * html body .CaptionApricot td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionApricot a:link { 
+	color: #000000;
+	}
+
+.CaptionApricot a:visited { 
+	color: #000000;
+	}
+
+.CaptionApricot a:hover, .CaptionApricot a:active { 
+	color: #ff0000;
+	}
+
+.CaptionApricot img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionApricot input {
+	vertical-align: middle;
+	}
+
+.RowApricot th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowApricot td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+
+html>body .RowApricot th, html>body .RowApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .RowApricot th, * html body .RowApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+caption.RowApricot { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border: 1px solid #df7637; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+html>body caption.RowApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body caption.RowApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.RowApricot a:link { 
+	color: #0033cc;
+	}
+
+.RowApricot a:visited { 
+	color: #800000;
+	}
+
+.RowApricot a:hover, .RowApricot a:active { 
+	color: #ff0000;
+	}
+
+.SeparatorApricot{
+	color: #df7637;
+	}
+
+.SeparatorApricot td{
+	height: 1px;
+	}
+
+
+.AltRowApricot th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowApricot td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f4e6; 
+	color: #000000;
+	}
+
+
+html>body .AltRowApricot th, html>body .AltRowApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .AltRowApricot th, * html body .AltRowApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.AltRowApricot a:link { 
+	color: #0033cc;
+	}
+
+.AltRowApricot a:visited { 
+	color: #800000;
+	}
+
+.AltRowApricot a:hover, .AltRowApricot a:active { 
+	color: #ff0000;
+	}
+
+.NoRecordsApricot td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	background-color: #f7f7f7; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterApricot td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border: 1px solid #fad27d; border-left: 0px none;
+	background-color: #fad27d; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .NoRecordsApricot td, html>body .FooterApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .NoRecordsApricot td, * html body .FooterApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.FooterApricot a:link { 
+	color: #0033cc;
+	}
+
+.FooterApricot a:visited { 
+	color: #800000;
+	}
+
+.FooterApricot a:hover, .FooterApricot a:active { 
+	color: #ff0000;
+	}
+
+.FooterApricot img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterApricot input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordApricot { 
+	border: 1px solid #df7637;
+	width: 100%;
+	}
+
+.ErrorApricot td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+
+* html>body .ErrorApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ErrorApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.ControlsApricot th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsApricot td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+.BottomApricot td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border: 1px solid #fad27d; border-left: 0px none;
+	background-color: #fad27d; color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .ControlsApricot th, html>body .ControlsApricot td, html>body .BottomApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ControlsApricot th, * html body .ControlsApricot td, * html body .BottomApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.BottomApricot a:link { 
+	color: #0033cc;
+	}
+
+.BottomApricot a:visited { 
+	color: #800000;
+	}
+
+.BottomApricot a:hover, .CaptionApricot a:active { 
+	color: #ff0000;
+	}
+
+.BottomApricot img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomApricot input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionApricot th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f4e6; 
+	color: #000000;
+	}
+
+.GroupCaptionApricot td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+html>body .GroupCaptionApricot th, html>body .GroupCaptionApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionApricot th, * html body .GroupCaptionApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionApricot a:link {
+	color: #000000;
+	}
+
+.GroupCaptionApricot a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionApricot a:hover, .GroupCaptionApricot a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterApricot td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border: 1px solid #fad27d; border-left: 0px none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #fad27d; 
+	color: #000000;
+	}
+
+
+html>body .GroupFooterApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupFooterApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterApricot a:link {
+	color: #0033cc;
+	}
+
+.GroupFooterApricot a:visited{
+	color: #800000;
+	}
+
+.GroupFooterApricot a:hover, .GroupFooterApricot a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterApricot img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterApricot input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalApricot td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f4e6; 
+	color: #000000;
+	border-bottom: 2px solid #df7637;
+	}
+
+
+html>body .SubTotalApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .SubTotalApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.SubTotalApricot a:link {
+	color: #0033cc;
+	}
+
+.SubTotalApricot a:visited{
+	color: #800000;
+	}
+
+.SubTotalApricot a:hover, .SubTotalApricot a:active{
+	color: #ff0000;
+	}
+
+.TotalApricot td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #f7f4e6; 
+	color: #000000;
+	}
+
+
+html>body .TotalApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .TotalApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.TotalApricot a:link {
+	color: #0033cc;
+	}
+
+.TotalApricot a:visited{
+	color: #800000;
+	}
+
+.TotalApricot a:hover, .TotalApricot a:active{
+	color: #ff0000;
+	}
+
+/* Form Options */
+.ButtonApricot { 
+	background-color: #df7637; color: #ffffff; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 11px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarApricot { 
+	border: 1px solid #df7637;
+	width: 100%;
+	}
+
+.CalendarWeekdayNameApricot{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #f7f4e6; 
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekdayNameApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekdayNameApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNameApricot a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekdayNameApricot a:visited{
+	color: #800000;
+	}
+
+.CalendarWeekdayNameApricot a:hover, .CalendarWeekdayNameApricot a:active{
+	color: #ff0000;
+	}
+
+.CalendarWeekendNameApricot{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #f7f4e6;	
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekendNameApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendNameApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNameApricot a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNameApricot a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNameApricot a:link, .CalendarWeekendNameApricot a:visited{
+	color: #ff0000;
+	}
+
+/* Calendar Day */
+.CalendarDayApricot{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+html>body .CalendarDayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarDayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayApricot a:link {
+	color: #0033cc;
+	}
+
+.CalendarDayApricot a:visited{
+	color: #800000;
+	}
+
+.CalendarDayApricot a:hover, .CalendarDayApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendApricot{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: center;
+	background-color: #f7f4e6;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendApricot a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendApricot a:visited{
+	color: #800000;
+	}
+
+.CalendarWeekendApricot a:hover, .CalendarWeekendApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Today */
+.CalendarTodayApricot {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #df7637;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+html>body .CalendarTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayApricot a:link {
+	color: #0033cc;
+	}
+
+.CalendarTodayApricot a:visited{
+	color: #800000;
+	}
+
+.CalendarTodayApricot a:hover, .CalendarTodayApricot a:active {
+	color: #ff0000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayApricot {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #df7637;
+	text-align: center;
+	background-color: #f7f4e6;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayApricot a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendTodayApricot a:visited{
+	color: #800000;
+	}
+
+.CalendarWeekendTodayApricot a:hover, .CalendarWeekendTodayApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayApricot{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #df7637;
+	}
+
+
+html>body .CalendarOtherMonthDayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayApricot a:link {
+	color: #df7637;
+	}
+
+.CalendarOtherMonthDayApricot a:visited{
+	color: #df7637;
+	}
+
+.CalendarOtherMonthDayApricot a:hover, .CalendarOtherMonthDayApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayApricot {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #df7637;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #df7637;
+	}
+
+
+html>body .CalendarOtherMonthTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayApricot a:link {
+	color: #df7637;
+	}
+
+.CalendarOtherMonthTodayApricot a:visited{
+	color: #df7637;
+	}
+
+.CalendarOtherMonthTodayApricot a:hover, .CalendarOtherMonthTodayApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendApricot {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: center;
+	background-color: #f7f4e6;	
+	color: #df7637;
+	}
+
+
+html>body .CalendarOtherMonthWeekendApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendApricot a:link {
+	color: #df7637;
+	}
+
+.CalendarOtherMonthWeekendApricot a:visited{
+	color: #df7637;
+	}
+
+.CalendarOtherMonthWeekendApricot a:hover, .CalendarOtherMonthWeekendApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayApricot {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #df7637;
+	text-align: center;
+	color: #df7637;
+	background-color: #f7f4e6;	
+	}
+	
+
+html>body .CalendarOtherMonthWeekendTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayApricot a:link {
+	color: #df7637;
+	}
+
+.CalendarOtherMonthWeekendTodayApricot a:visited{
+	color: #df7637;
+	}
+
+.CalendarOtherMonthWeekendTodayApricot a:hover, .CalendarOtherMonthWeekendTodayApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayApricot{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #fad27d;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+html>body .CalendarSelectedDayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarSelectedDayApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayApricot a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDayApricot a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDayApricot a:hover, .CalendarSelectedDayApricot a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorApricot {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	background-color: #fad27d; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .CalendarNavigatorApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorApricot a:link {
+	color: #0033cc;
+	}
+
+.CalendarNavigatorApricot a:visited{
+	color: #800000;
+	}
+
+.CalendarNavigatorApricot a:hover, .CalendarNavigatorApricot a:active{
+	color: #ff0000;
+	}
+
+.CalendarNavigatorApricot img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorApricot td {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+.CalendarNavigatorApricot th {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+
+html>body .CalendarNavigatorApricot th, html>body .CalendarNavigatorApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorApricot th, * html body .CalendarNavigatorApricot td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventApricot{
+	font-family: Tahoma; font-size: 80%;
+	text-align: left;
+	}
+
+
+html>body .CalendarEventApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarEventApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventApricot a:link {
+	color: #0033cc;
+	}
+
+.CalendarEventApricot a:visited{
+	color: #800000;
+	}
+
+.CalendarEventApricot a:hover, .CalendarEventApricot a:active{
+	color: #ff0000;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thApricot { 
+	font-family: Tahoma; font-size: 80%;
+	font-weight: bold;
+}
+
+
+html>body .thApricot {
+	font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .thApricot {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderApricot .thApricot { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 3px;
+	background-color: #df7637; color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+html>body .HeaderApricot .thApricot {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderApricot .thApricot {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.CaptionApricot .thApricot { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #fad27d; color: #000000;
+	white-space: nowrap;
+}
+
+
+html>body .CaptionApricot .thApricot {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionApricot .thApricot {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowApricot .thApricot { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.AltRowApricot .thApricot { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.ControlsApricot .thApricot { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.GroupCaptionApricot .thApricot {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #fad27d; border-right: 1px solid #fad27d;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f4e6; 
+	color: #000000;
+}
+
+
+html>body .GroupCaptionApricot .thApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+html>body .RowApricot .thApricot, html>body .AltRowApricot .thApricot, html>body .ControlsApricot .thApricot {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionApricot .thApricot {
+	font-family: Tahoma; font-size: 100%;
+}
+
+* html body .RowApricot .thApricot, * html body .AltRowApricot .thApricot, * html body .ControlsApricot .thApricot {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuApricot td {
+	font-family: Tahoma; font-size: 80%;
+}
+
+
+html>body .simpleMenuApricot td {
+	font-family: Tahoma; font-size: 100%;
+} 
+
+
+/*ie6*/
+* html body .simpleMenuApricot td {
+	font-family: Tahoma; font-size: 100%;
+} 
+/*end*/
