@@ -1,0 +1,93 @@
+/* Extra Styles.  Be Sure this file loads AFTER the CCS styles! */
+
+
+/* Fluid Layout Settings */
+html, body {
+	height: 100%;
+}
+
+#nonFooter {
+	position: relative;
+	min-height: 100%;
+}
+
+html #nonFooter {
+	height: 100%;
+}
+
+#pagecontent {
+	padding-bottom: 1em;
+}
+
+#pagefooter {
+	position: relative;
+	margin-top: -1.6em;
+	clear: both;
+}
+/* End of Fluid Layout Settings */
+
+input, textarea, select, option
+{
+	font-family: Georgia, "Bitstream Charter", serif;
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	padding: 2px;
+	font-size: 13px;
+}
+
+
+/* Prettier record form controls */
+.Record input, .Record textarea, .Record select, .Record option {
+	padding: 4px;
+	font-size: 13px;
+}
+
+.Record .Controls .th {
+	vertical-align: middle;
+}
+
+
+/* Bigger Buttons with the finger! */
+.Button {
+	padding: 4px;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 13px;
+}
+
+/* Pretty up the Error box */
+.Error, .Error td {
+	background-color: #F2F2F2;
+	padding: 5px 5px 5px 4px;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+/* Login Form Style */
+#loginLoginForm td {
+	
+}
+
+#loginLoginForm input {
+	padding: 5px;
+}
+
+#loginLoginForm .th {
+	padding: 10px 0px 10px 5px;
+	border-right: 0px;
+}
+/* End of Login Form Style */
+
+
+.MenuStyle a:link, .MenuStyle a:hover, .MenuStyle a:visited {
+	padding: 5px;
+}
+
+
+/* Calendar Events */
+.Grid .CalendarEvent {
+	font-size: 80%;
+}
