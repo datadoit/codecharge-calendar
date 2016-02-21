@@ -269,7 +269,7 @@ CREATE TABLE `tbl_config` (
 -- ----------------------------
 -- Records of tbl_config
 -- ----------------------------
-INSERT INTO `tbl_config` VALUES ('1', 'CodeChargeCalendar', '1', '<span style=\'color:RED; font-weight:bold;\'>Maintenance is being performed. Please try again later.</span>', 'GreenApple', 'en', 'CodeCharge Calendar', null, 'Month', null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `tbl_config` VALUES ('1', 'codecharge-calendar-master', '1', '<span style=\'color:RED; font-weight:bold;\'>Maintenance is being performed. Please try again later.</span>', 'GreenApple', 'en', 'CodeCharge Calendar', null, 'Month', null, null, null, null, null, null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for tbl_groups
