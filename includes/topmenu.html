@@ -1,0 +1,62 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- Top Menu Begin -->
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-0A01FE2F
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//Include User Scripts @1-D91F0296
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/menu/WCH.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/menu/ADxMenu.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/adx.css" />
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/{CCS_Style}/Menu.css" />
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include User Scripts
+
+//bind_events @1-437B4C47
+function topmenu_bind_events() {
+    addEventHandler("topmenuTopMenuContainer", "load", load_ADxMenu);
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<table style="BORDER-BOTTOM: 0px; POSITION: absolute; BORDER-LEFT: 0px; WIDTH: 100%; BACKGROUND: #4a4a4a; COLOR: #ffffff; BORDER-TOP: 0px; FONT-WEIGHT: bold; BORDER-RIGHT: 0px; LEFT: 0px" cellspacing="0" cellpadding="5">
+  <tr>
+    <td>
+      <!-- BEGIN Menu TopMenu -->
+      <div class="MenuStyle" id="topmenuTopMenuContainer">
+        <ul class="adxm {TopMenu:MenuType} level1">
+          <!-- BEGIN Item -->
+          <!-- BEGIN OpenLevel -->
+          <ul class="level{TopMenu:Item_Level}">
+            <!-- END OpenLevel -->
+            <li><a href="{ItemLink_Src}" class="{TopMenu:Submenu}" target="{TopMenu:Target}" title="{TopMenu:Title}">{ItemLink}</a> 
+            <!-- BEGIN CloseItem --></li>
+ <!-- END CloseItem -->
+            <!-- BEGIN CloseLevel -->
+          </ul>
+ </li>
+ <!-- END CloseLevel --><!-- END Item -->
+        </ul>
+ 
+      </div>
+ <!-- END Menu TopMenu --></td> 
+    <td align="right">&nbsp;</td> 
+  </tr>
+</table>
+<!-- Top Menu End -->

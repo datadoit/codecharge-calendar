@@ -1,0 +1,90 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- Login Block Begin -->
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-0A01FE2F
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//login_OnLoad @1-6243F4BF
+function login_OnLoad()
+{
+    var result = true;
+//End login_OnLoad
+
+//Set Focus @22-BAAE32B8
+    if (document.forms["LoginForm"] && document.forms["LoginForm"].login) document.forms["LoginForm"].login.focus();
+//End Set Focus
+
+//Close login_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close login_OnLoad
+
+//bind_events @1-1205472A
+function login_bind_events() {
+    addEventHandler("login", "load", login_OnLoad);
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<div style="POSITION: relative; TOP: 120px; LEFT: 15%;" align="center">
+  <!-- BEGIN Record LoginForm -->
+  <form id="loginLoginForm" method="post" name="{HTMLFormName}" action="{Action}">
+    <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+          <table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="HeaderLeft"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+              <td class="th"><strong>{res:CCS_Login_Form_Caption}</strong></td> 
+              <td class="HeaderRight"><img border="0" alt="" src="{page:pathToRoot}Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+            <tr class="Controls">
+              <td class="th"><label for="loginLoginFormlogin">{res:CRM_LoginEmailAddress}</label>:&nbsp;</td> 
+              <td><input id="loginLoginFormlogin" value="{login}" maxlength="100" name="{login_Name}" size="20" style="width: 250px;" /></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <td class="th"><label for="loginLoginFormpassword">{res:CCS_Password}</label>:&nbsp;</td> 
+              <td><input id="loginLoginFormpassword" value="{password}" maxlength="100" type="password" name="{password_Name}" size="20" style="width: 250px;" /></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <td colspan="2" align="center">&nbsp;<input id="loginLoginFormautoLogin" value="1" type="checkbox" name="{autoLogin_Name}" {autoLogin} /><label for="loginLoginFormautoLogin">{res:CCS_Login_AutoLogin_Caption}</label></td> 
+            </tr>
+ 
+            <tr class="Bottom">
+              <td colspan="2" align="right">
+                <!-- BEGIN Button Button_DoLogin --><input id="loginLoginFormButton_DoLogin" class="Button" value="{res:CCS_LoginBtn}" alt="{res:CCS_LoginBtn}" type="submit" name="{Button_Name}" /><!-- END Button Button_DoLogin --></td> 
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </form>
+ <!-- END Record LoginForm -->{CRMInactive} 
+</div>
+<!-- Login Block End -->

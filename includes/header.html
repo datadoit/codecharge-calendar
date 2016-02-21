@@ -1,0 +1,92 @@
+<meta content="application/xhtml+xml; charset=utf-8" http-equiv="Content-Type" />
+<!-- Header Begin -->
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+//Begin CCS script
+//Include Common JSFunctions @1-0A01FE2F
+
+//--><!]]>
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+//End Include Common JSFunctions
+
+//headerHeaderFormstyle_OnChange @8-FA961538
+function headerHeaderFormstyle_OnChange()
+{
+    var result = true;
+//End headerHeaderFormstyle_OnChange
+
+//Submit Form @13-BA1DAA27
+    document.forms["HeaderForm"].submit();
+//End Submit Form
+
+//Close headerHeaderFormstyle_OnChange @8-BC33A33A
+    return result;
+}
+//End Close headerHeaderFormstyle_OnChange
+
+//headerHeaderFormlocale_OnChange @14-E9653DC4
+function headerHeaderFormlocale_OnChange()
+{
+    var result = true;
+//End headerHeaderFormlocale_OnChange
+
+//Submit Form @15-BA1DAA27
+    document.forms["HeaderForm"].submit();
+//End Submit Form
+
+//Close headerHeaderFormlocale_OnChange @14-BC33A33A
+    return result;
+}
+//End Close headerHeaderFormlocale_OnChange
+
+//headerHeaderFormButton_Search_OnClick @9-E7F67683
+function headerHeaderFormButton_Search_OnClick()
+{
+    disableValidation = true;
+}
+//End headerHeaderFormButton_Search_OnClick
+
+//bind_events @1-B8B7FF87
+function header_bind_events() {
+    addEventHandler("headerHeaderFormstyle", "change", headerHeaderFormstyle_OnChange);
+    addEventHandler("headerHeaderFormlocale", "change", headerHeaderFormlocale_OnChange);
+    addEventHandler("headerHeaderFormButton_Search", "click", headerHeaderFormButton_Search_OnClick);
+}
+//End bind_events
+
+//End CCS script
+
+//--><!]]>
+</script>
+<table style="BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-TOP: 0px; BORDER-RIGHT: 0px" class="Header" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="PADDING-LEFT: 5px" class="th"><span style="FLOAT: left; FONT-WEIGHT: bold">
+      <!-- BEGIN Link TitleLink --><a href="{TitleLink_Src}" id="headerTitleLink">{TitleLink}</a><!-- END Link TitleLink --></span></td> 
+    <td style="TEXT-ALIGN: right; PADDING-RIGHT: 5px; VERTICAL-ALIGN: top" class="th">
+      <!-- BEGIN Record HeaderForm -->
+      <form id="headerHeaderForm" method="post" name="{HTMLFormName}" action="{Action}">
+        <span style="FONT-SIZE: 80%; FONT-WEIGHT: normal">{lbl_Welcome} {lbl_Name}</span>&nbsp; 
+        <!-- BEGIN ListBox locale -->
+        <select id="headerHeaderFormlocale" name="{locale_Name}">
+          <option selected="selected" value="">{res:CRM_SelectLocale}</option>
+ {locale_Options} 
+        </select>
+ <!-- END ListBox locale -->
+        <!-- BEGIN ListBox style -->
+        <select id="headerHeaderFormstyle" name="{style_Name}">
+          <option selected="selected" value="">{res:CRM_SelectStyle}</option>
+ {style_Options} 
+        </select>
+ <!-- END ListBox style -->
+        <!-- BEGIN Button Button_Search --><input style="DISPLAY: none" id="headerHeaderFormButton_Search" class="Button" value="{res:CCS_Search}" alt="{res:CCS_Insert}" type="submit" name="{Button_Name}" /><!-- END Button Button_Search -->
+        <!-- BEGIN Link Login --><a href="{Login_Src}" id="headerHeaderFormLogin"><img style="VERTICAL-ALIGN: middle" border="0" alt="{res:CCS_Login}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonLogin.gif" /></a><!-- END Link Login -->
+        <!-- BEGIN Link Logout --><a href="{Logout_Src}" id="headerHeaderFormLogout"><img style="VERTICAL-ALIGN: middle" border="0" alt="{res:CCS_LogoutBtn}" src="{page:pathToRoot}Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonLogout.gif" /></a><!-- END Link Logout -->
+      </form>
+ <!-- END Record HeaderForm --></td> 
+  </tr>
+</table>
+<!-- Header End -->
